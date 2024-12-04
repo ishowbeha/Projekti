@@ -3,15 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Furniture Website</title>
+    <link rel="stylesheet" href="style.css">
+   
+   
 </head>
 <body>
-    <h1>HELLOO</h1>
+    
+    <header class="header">
+        <div class="navbar">
+            
+            <div class="logo">
+                <img id="logo1" src="LogoKryesorePaBackground.png" alt="Logo" />
+            </div>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#bachelor">Bachelor</a>
+                <a href="#drawers">Drawers</a>
+                <a href="#sofas">Sofas</a>
+                <a href="#bookcases">Bookcases</a>
+                <a href="#table">Table</a>
+            </nav>
+            <div class="cart-icons">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+        </div>
+    </header>
 
-    <p>hello 2</p>
+      <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 style="color: rgb(124, 171, 184); ">WHERE FUNCTION MEETS STYLE</h1>
+            <p style="color: rgb(124, 171, 184); ">Design your home , design your story...</p>
+            <button class="btn" onclick="scrollToSlider()">SHOP NOW</button>
+        </div>
+    </section>
+    <div id="kontenti">
+        <div>
+            <h2>Slide Show: Shfaqja e Imazheve</h2>
+            <img name="mySlide" id="slideshow" src="foto1.avif" alt="Slider Image" />
+        <div>
+        <div class="next-btn-container">
+            <button class="next-btn" onclick="ndrroImg()">Next</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 
-    <h2>hello 3</h2>
-
-    <h4>Hello 4</h4>
 </body>
 </html>
