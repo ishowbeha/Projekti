@@ -9,7 +9,12 @@ body {
     color: #333;
     width: 100%;
 }
-
+#loginDiv #butoniLogIn{
+    width: 95px;
+    height: 30px;
+    background-color: rgb(124, 171, 184);
+    margin-right: 23px;
+}
 #home {
     background-image: url("Foto_Kryesore.jpg");
     background-size: cover; 
@@ -43,7 +48,7 @@ body {
 .navbar .logo img {
     width: 120px;
     height: auto;
-    margin-left: 16px;
+    margin-left: 9px;
 }
 
 .navbar nav a {
