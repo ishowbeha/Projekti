@@ -189,7 +189,7 @@ div #kategoritText{
 
 .categories-grid img {
     width: 100%; /* Bën fotot të përshtaten brenda kolonave */
-    height:160px ; /* Ruhet proporcioni i fotove */
+    height: 164px ; /* Ruhet proporcioni i fotove */
     border-radius: 5px; /* Opsionale: Kënde të rrumbullakosura */
 }
 
