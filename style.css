@@ -22,6 +22,7 @@ body {
     background-repeat: no-repeat;
     height: 546px; 
     width: 100%;
+    scroll-margin-top: 125px;
 }
 
 
@@ -83,7 +84,6 @@ body {
     background-size: cover;
     background-position: center;
     color: white;
-    border-radius: 0 0 50px 50px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -128,10 +128,12 @@ body {
 #kontenti header {
     margin-bottom: 1rem;
 }
-
+div #ShikoMEShumeID{
+    margin: 71px 0px 44px 0px;
+}
 #kontenti #slideshow {
-    width: 400px; /* Madhësi e përcaktuar */
-    height: 250px; /* Madhësi e përcaktuar */
+    width: 659px;
+    height: 362px;
     border-radius: 10px;
     object-fit: cover; /* Siguron që fotot përshtaten mirë brenda madhësisë */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -146,7 +148,7 @@ body {
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.3s ease;
-    margin-top: 20px;
+    margin-top: -7px;
     display: inline-block; /* Qëndron në të njëjtën faqe */
 }
 

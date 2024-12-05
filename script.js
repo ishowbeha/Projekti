@@ -25,5 +25,5 @@
     function scrollToSlider() {
         document.getElementById('kontenti').scrollIntoView({ behavior: 'smooth' });
     }
-   
+    
 
