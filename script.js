@@ -12,7 +12,7 @@
     function ndrroImg() {
    
         document.getElementById('slideshow').src = imgArray[i];
-ari
+
         if (i < imgArray.length - 1) {
             i ++;
         } else {
