@@ -25,5 +25,8 @@
     function scrollToSlider() {
         document.getElementById('kontenti').scrollIntoView({ behavior: 'smooth' });
     }
+    function scrollToCategory() {
+        document.getElementById('categories').scrollIntoView({ behavior: 'smooth' });
+    }
     
 
