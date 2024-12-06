@@ -28,13 +28,12 @@ h2 {
     border-radius: 5px;
 }
 .input-field:focus {
-    border-color: #4CAF50;
     outline: none;
 }
 .btn {
     width: 100%;
     padding: 10px;
-    background-color: #4CAF50;
+    background-color: #0a2540;
     color: white;
     border: none;
     border-radius: 5px;
@@ -42,5 +41,17 @@ h2 {
     font-size: 16px;
 }
 .btn:hover {
-    background-color: #45a049;
+    background-color: #0a2540;
+}
+.signup-link {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+}
+.signup-link a {
+    color: rgb(124, 171, 184);
+    text-decoration: none;
+}
+.signup-link a:hover {
+    text-decoration: underline;
 }
