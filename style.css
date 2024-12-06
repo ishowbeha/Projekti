@@ -229,3 +229,7 @@ div #kategoritText{
     color: white;
     padding: 0 10px 10px;
 }
+
+div .category-link{
+    color: #0a2540;
+}

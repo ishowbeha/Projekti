@@ -1,0 +1,120 @@
+a{
+    overflow: hidden;
+}
+.header {
+    background-color: #0a2540;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.navbar .logo img {
+    width: 120px;
+    height: auto;
+    margin-left: 9px;
+}
+
+.navbar nav a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: #f4c542;
+}
+
+.cart-icons i {
+    color: white;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #0a2540;
+}
+.KutiaKryesore {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.kutia {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.kutia:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+.kutia img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.cmimi {
+    font-size: 18px;
+    color: #0a2540;
+    margin: 10px 0;
+}
+.butoniBuy {
+    background-color:  #0a2540;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+.butoniBuy:hover {
+    background-color:  #0a2540;
+}
+@media (max-width: 1200px) {
+    .KutiaKryesore{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 900px) {
+    .KutiaKryesore {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .KutiaKryesore{
+        grid-template-columns: 1fr;
+    }
+}
+   
