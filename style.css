@@ -14,9 +14,11 @@ p{
 }
 #loginDiv #butoniLogIn{
     width: 95px;
-    height: 30px;
+    height: 35px;
     background-color: rgb(124, 171, 184);
     margin-right: 23px;
+    border: none;
+    border-radius: 15px;
 }
 #home {
     background-image: url("Foto_Kryesore.jpg");

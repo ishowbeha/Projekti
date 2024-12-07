@@ -20,15 +20,26 @@ h2 {
     text-align: center;
     margin-bottom: 20px;
 }
-.input-field {
-    width: 100%;
+.inputet {
+    width: 93%;
     padding: 10px;
-    margin: 10px 0;
+    margin: 8px 0;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 7px;
 }
-.input-field:focus {
-    border-color: #4CAF50;
+.inputetConfirmPassword {
+    width: 93%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    margin-bottom: 14px;
+}
+.inputet:focus {
+    border-color: #0a2540;
+    outline: none;
+}
+.inputetConfirmPassword:focus {
+    border-color: #0a2540;
     outline: none;
 }
 .input-container {
@@ -36,13 +47,14 @@ h2 {
     justify-content: space-between;
     gap: 10px;
 }
-.input-container .input-field {
+.input-container .inputet {
     width: 48%;
 }
 .birthday-container {
     display: flex;
     justify-content: space-between;
     gap: 10px;
+    margin-bottom: 9px;
 }
 .birthday-container select {
     width: 32%;
@@ -50,41 +62,24 @@ h2 {
     border-radius: 5px;
     border: 1px solid #ccc;
 }
-.mainGender {
+.mainGender{
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    margin: 20px 0;
+    justify-content: space-evenly;
+    margin: 10px;
 }
-
-.genders {
-    flex: 1;
+.mainGender .genders{
+    display: flex;
+    flex-direction: column-reverse;
 }
-
-.genders label {
-    display: block;
+.butoni {
     width: 100%;
     padding: 10px;
-    text-align: center;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #f9f9f9;
-    transition: background-color 0.3s, border-color 0.3s;
-}
-.btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
+    background-color:#0a2540;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-}
-.btn:hover {
-    background-color: #45a049;
 }
 .login-link {
     display: block;
@@ -92,12 +87,9 @@ h2 {
     margin-top: 15px;
 }
 .login-link a {
-    color: #4CAF50;
+    color: rgb(124, 171, 184);
     text-decoration: none;
 }
 .login-link a:hover {
     text-decoration: underline;
-}
-p{
-    margin: 0%;
 }
