@@ -193,8 +193,9 @@ div #kategoritText{
 
 .categories-grid img {
     width: 100%; /* Bën fotot të përshtaten brenda kolonave */
-    height: 164px ; /* Ruhet proporcioni i fotove */
+    height: 170px ; /* Ruhet proporcioni i fotove */
     border-radius: 5px; /* Opsionale: Kënde të rrumbullakosura */
+    margin-top: 20px;
 }
 
 .category-card {
@@ -204,6 +205,7 @@ div #kategoritText{
     overflow: hidden;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    margin-top: 20px;
 }
 
 .category-card:hover {
