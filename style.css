@@ -198,7 +198,7 @@ div #kategoritText{
 }
 
 .category-card {
-    background-color: #0a2540;
+    background-color: white;
     border: 1px solid #ddd;
     border-radius: 29px;
     overflow: hidden;
@@ -219,17 +219,19 @@ div #kategoritText{
 
 .category-card h3 {
     font-size: 20px;
-    color: white;
+    color:  #0a2540;
     padding: 10px;
     margin: 0;
 }
 
 .category-card p {
-    font-size: 14px;
-    color: white;
+    font-size: 16px;
+    color: #0a2540;
     padding: 0 10px 10px;
 }
 
+
+
 div .category-link{
-    color: #0a2540;
+    color:white;
 }
