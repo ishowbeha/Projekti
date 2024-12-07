@@ -205,7 +205,7 @@ div #kategoritText{
     overflow: hidden;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
-    margin-top: 20px;
+   
 }
 
 .category-card:hover {
