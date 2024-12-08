@@ -1,13 +1,67 @@
 body {
-    background-image: url('LogInPhoto.png'); /* Fotoja si sfond */
-    background-size: cover; /* Mbulo të gjithë faqen */
-    background-position: center; /* Qendroje sfondin */
-    background-repeat: no-repeat; /* Mos përsërit sfondin */
+    background-image: url('LogInPhoto.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
     margin: 0;
-    height: 100vh; /* Lartësia e trupit sa dritarja */
+    height: 100vh; 
+}
+.header {
+    background-color: #0a2540;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     display: flex;
-    justify-content: center; /* Qendron në mes horizontalisht */
-    align-items: center; /* Qendron në mes vertikalisht */
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.navbar .logo img {
+    width: 120px;
+    height: auto;
+    margin-left: 9px;
+}
+
+.navbar nav a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: #f4c542;
+}
+#loginDiv #butoniLogIn{
+    width: 95px;
+    height: 35px;
+    background-color: rgb(124, 171, 184);
+    margin-right: 23px;
+    border: none;
+    border-radius: 15px;
+}
+#butoniLogIn:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.c{
+    width: 100%;
+    height: 83%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .signup-container {
     background-color: rgba(255, 255, 255, 0.8); /* Sfondi me pak transparencë për të parë foto-n pas */

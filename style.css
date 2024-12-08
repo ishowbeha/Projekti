@@ -12,18 +12,6 @@ body {
 p{
     color: #0a2540;
 }
-#loginDiv #butoniLogIn{
-    width: 95px;
-    height: 35px;
-    background-color: rgb(124, 171, 184);
-    margin-right: 23px;
-    border: none;
-    border-radius: 15px;
-}
-#butoniLogIn:hover{
-    cursor: pointer;
-    transform: scale(1.05);
-}
 #home {
     background-image: url("Foto_Kryesore.jpg");
     background-size: cover; 
@@ -73,12 +61,17 @@ p{
 .navbar nav a:hover {
     color: #f4c542;
 }
-
-.cart-icons i {
-    color: white;
-    margin-left: 1rem;
-    font-size: 1.2rem;
+#loginDiv #butoniLogIn{
+    width: 95px;
+    height: 35px;
+    background-color: rgb(124, 171, 184);
+    margin-right: 23px;
+    border: none;
+    border-radius: 15px;
+}
+#butoniLogIn:hover{
     cursor: pointer;
+    transform: scale(1.05);
 }
 
 

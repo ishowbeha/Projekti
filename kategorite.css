@@ -1,6 +1,18 @@
 a{
     overflow: hidden;
 }
+#loginDiv #butoniLogIn{
+    width: 95px;
+    height: 35px;
+    background-color: rgb(124, 171, 184);
+    margin-right: 23px;
+    border: none;
+    border-radius: 15px;
+}
+#butoniLogIn:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
 .header {
     background-color: #0a2540;
     color: white;
@@ -81,6 +93,7 @@ h1 {
 }
 .kutia img {
     width: 100%;
+    height: 245px;
     border-radius: 8px;
     margin-bottom: 15px;
 }
