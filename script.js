@@ -28,5 +28,27 @@
     function scrollToCategory() {
         document.getElementById('categories').scrollIntoView({ behavior: 'smooth' });
     }
+    function scrollToOfferta(){
+        document.getElementById('slider-seksioni').scrollIntoView({ behavior: 'smooth' });  
+    }
+    var j = 0; 
+    var imgArray2 = [
+        "photoSlider1.jpg",
+        "photoSlider2.jpg",
+        "photoSlider3.jpg",
+        "photoSlider4.jpg",
+        "photoSlider5.jpg"
+    ];
     
-
+  
+    function ndrroSlider() {
+        document.getElementById("slider-imazh").src = imgArray2[j]; 
+        if (j < imgArray.length - 1) {
+            j++; 
+        } else {
+            j= 0; 
+        }
+    }
+    
+   
+    setInterval(ndrroSlider, 1500);

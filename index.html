@@ -19,9 +19,9 @@
             <nav>
                 <a href="index.html">Home</a>
                 <a href="index.html#categories" onclick=scrollToCategory()>Category</a>
-                <a href="#drawers">Drawers</a>
-                <a href="#sofas">Sofas</a>
-                <a href="#bookcases">Bookcases</a>
+                <a href="index.html#slider-seksioni">Offerts</a>
+                <a href="#sofas">Contact Us</a>
+          
             </nav>
             <div id="loginDiv">
               <a href="LogIn1.html"> <button id="butoniLogIn">Log In</button></a>
@@ -39,16 +39,18 @@
             <button class="btn" onclick="scrollToSlider()">SEE MORE</button>
             </div>
         </div>
+
     </section>
     <div id="kontenti">
         <div>
             <h2 id="ShikoMEShumeID">Click NEXT to see more</h2>
-            <img name="mySlide" id="slideshow" src="foto1.avif" alt="Kliko NEXT per t'u kthyer te fortoja e pare!" />
+            <img  id="slideshow" src="foto1.avif" alt="Kliko NEXT per t'u kthyer te fortoja e pare!" />
         <div>
         <div class="next-btn-container">
             <button class="next-btn" onclick="ndrroImg()">NEXT</button>
         </div>
     </div>
+
     <section id="categories">
         <div>
             <h2 id="kategoritText">Shop by Categories</h2>
@@ -65,7 +67,7 @@
                 </div>
             </a>
     
-            <!-- Chair -->
+            <!-- Sofa -->
             <a href="Sofa.html"  class="category-link">
                 <div class="category-card">
                     <img src="Icons/SofaLogo.png" alt="Sofa">
@@ -75,7 +77,7 @@
                 </div>
             </a>
     
-            <!-- Table -->
+            <!-- Bedroom-->
             <a href="BedRoom.html" class="category-link">
                 <div class="category-card">
                     <img src="Icons/BedroomLogo.png" alt="Bedroom">
@@ -85,7 +87,7 @@
                 </div>
             </a>
     
-            <!-- Cabinet -->
+            <!-- Table -->
             <a href="Table.html" class="category-link">
                 <div class="category-card">
                     <img src="Icons/TableLogo.png" alt="Table">
@@ -95,7 +97,7 @@
                 
             </a>
     
-            <!-- Bed -->
+            <!-- Wardrobe-->
             <a href="Wardrobe.html" class="category-link">
                 <div class="category-card">
                     <img src="Icons/WardrobeLogo.png" alt="Bed">
@@ -105,7 +107,26 @@
             </a>
         </div>
     </section>
+
+
+    <section id="slider-seksioni" class="slider-seksioni">
+        <div class="slider-container">
+         
+            <div class="slider-informacion">
+                <h2>Special Offer 30% OFF</h2>
+                <h3>Furniture Sale</h3>
+                <button class="blej-tani">Buy Now</button>
+            </div>
+    
+        
+            <div class="slider">
+                <img id="slider-imazh" src="photoSlider1.jpg" alt="Slider Image" />
+            </div>
+        </div>
+    </section>
     <script src="script.js"></script>
+
+
 
 </body>
 </html>
