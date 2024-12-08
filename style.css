@@ -64,10 +64,10 @@ p{
 #loginDiv #butoniLogIn{
     width: 95px;
     height: 35px;
-    background-color: rgb(124, 171, 184);
+    background-color: white;
     margin-right: 23px;
     border: none;
-    border-radius: 15px;
+   
 }
 #butoniLogIn:hover{
     cursor: pointer;
@@ -129,6 +129,11 @@ p{
 
 #kontenti header {
     margin-bottom: 1rem;
+}
+#categories #shikoMore{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 div #ShikoMEShumeID{
     margin: 71px 0px 44px 0px;
@@ -356,3 +361,6 @@ div .category-link{
   .footer-container p strong {
     color: #ffcc00;
   }
+#p , #a{
+    color: white;
+}

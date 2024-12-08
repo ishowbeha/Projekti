@@ -4,10 +4,10 @@ a{
 #loginDiv #butoniLogIn{
     width: 95px;
     height: 35px;
-    background-color: rgb(124, 171, 184);
+    background-color: white;
     margin-right: 23px;
     border: none;
-    border-radius: 15px;
+   
 }
 #butoniLogIn:hover{
     cursor: pointer;
@@ -51,15 +51,6 @@ a{
 .navbar nav a:hover {
     color: #f4c542;
 }
-
-.cart-icons i {
-    color: white;
-    margin-left: 1rem;
-    font-size: 1.2rem;
-    cursor: pointer;
-}
-
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -114,6 +105,9 @@ h1 {
 }
 .butoniBuy:hover {
     background-color:  #0a2540;
+}
+#p , #a{
+    color: white;
 }
 @media (max-width: 1200px) {
     .KutiaKryesore{

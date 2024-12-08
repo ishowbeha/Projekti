@@ -47,10 +47,10 @@ body {
 #loginDiv #butoniLogIn{
     width: 95px;
     height: 35px;
-    background-color: rgb(124, 171, 184);
+    background-color: white;
     margin-right: 23px;
     border: none;
-    border-radius: 15px;
+   
 }
 #butoniLogIn:hover{
     cursor: pointer;
@@ -151,4 +151,7 @@ label,p {
 }
 .login-link a:hover {
     text-decoration: underline;
+}
+#p , #a{
+    color: white;
 }
