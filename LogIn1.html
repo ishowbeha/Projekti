@@ -59,5 +59,31 @@
         <p ><a id="a" href="ContactForm.html">Click here to contact us</a></p>
     </div>
   </footer>
+  <script>
+  document.addEventListener("DOMContentLoaded", function(ngjarja) {
+    const SubmitButon = document.getElementById('btn');
+    
+    const validate = (ngjarja) => {
+    ngjarja.preventDefault();
+            var username = document.getElementById("userid").value;
+            var password = document.getElementById("pass").value;
+
+            if (username == "" && username==null) {
+                alert("Emri i përdoruesit është i detyrueshëm.");
+                return false;
+            }
+
+
+            if (password == "" && username==null) {
+                alert("Fjalëkalimi është i detyrueshëm.");
+                return false;
+            }
+            alert("logimi u krue me sukses!");
+            return true; 
+            
+        }
+        SubmitButon.addEventListener('click', validate);
+    });
+  </script>
 </body>
 </html>

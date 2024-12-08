@@ -86,7 +86,7 @@
             <label for="message">Message:</label><br>
             <textarea id="message" name="message" rows="4" placeholder="Write your message"></textarea><br>
             
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" id="btn">
         </form>
     </div>
 
@@ -111,7 +111,11 @@
       </footer>
       
     <script>
-        function validateForm() {
+    document.addEventListener("DOMContentLoaded", function(ngjarja) {
+    const SubmitButon = document.getElementById('btn');
+    
+    const validate = (ngjarja) => {
+        ngjarja.preventDefault();
             var name = document.getElementById("name").value;
             var email = document.getElementById("email").value;
             var message = document.getElementById("message").value;
@@ -121,19 +125,25 @@
                 return false;
             }
 
-            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-            if (!emailPattern.test(email)) {
-                alert("Ju lutem shkruani një email të vlefshëm.");
+            if(email === ""){
+                alert("Email eshte i detyrueshem.");
                 return false;
-            }
+            }   
 
             if (message == "") {
                 alert("Mesazhi është i detyrueshëm.");
                 return false;
             }
-
+            alert("U dergua me sukses");
             return true;
         }
+        const emailValid = (email)=> {
+        const emailRegex = /^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,4})$/;
+        return emailRegex.test(email.toLowerCase());
+    }
+        SubmitButon.addEventListener('click', validate);
+
+    });
     </script>
 </body>
 </html>
