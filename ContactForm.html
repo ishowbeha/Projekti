@@ -1,0 +1,118 @@
+
+<!--Ketu gjnedet komplet kodi i kontakt form, ne menyre qe te mos krijohen shume files-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Forma</title>
+        <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-size: cover; 
+            margin: 0;
+            padding: 0;
+            background-image: url('LogInPhoto.png'); 
+        }
+ 
+
+
+        .contact-form {
+            background-color: #f9f9f9;
+            padding: 50px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 60px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .contact-form input[type="submit"] {
+            background-color: #0a2540;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: #f4c542;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <header class="header">
+        <div class="navbar">
+            
+            <div class="logo">
+                <img id="logo1" src="Icons/LogoKryesorePaBackground.png" alt="Logo" />
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="index.html#categories" >Category</a>
+                <a href="index.html#slider-seksioni" >Offerts</a>
+                <a href="index.html#footer">Contact Us</a>
+          
+            </nav>
+            <div id="loginDiv">
+              <a href="LogIn1.html"> <button id="butoniLogIn">Log In</button></a>
+            </div>
+            </div>
+        </header>
+
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form onsubmit="return validateForm()" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Enter your name"><br>
+            
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email" placeholder="Enter your email"><br>
+            
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" placeholder="Write your message"></textarea><br>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            if (name == "") {
+                alert("Emri është i detyrueshëm.");
+                return false;
+            }
+
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailPattern.test(email)) {
+                alert("Ju lutem shkruani një email të vlefshëm.");
+                return false;
+            }
+
+            if (message == "") {
+                alert("Mesazhi është i detyrueshëm.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>
