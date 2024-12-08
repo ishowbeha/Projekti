@@ -188,7 +188,7 @@ div #kategoritText{
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
-    padding: 10px; 
+    padding: 35px; 
 }
 
 .categories-grid img {

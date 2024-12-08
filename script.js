@@ -25,15 +25,7 @@
     function scrollToSlider() {
         document.getElementById('kontenti').scrollIntoView({ behavior: 'smooth' });
     }
-    function scrollToCategory() {
-        document.getElementById('categories').scrollIntoView({ behavior: 'smooth' });
-    }
-    function scrollToOfferta(){
-        document.getElementById('slider-seksioni').scrollIntoView({ behavior: 'smooth' });  
-    }
-    function scrollToOfferta(){
-        document.getElementById('footer-container').scrollIntoView({ behavior: 'smooth' });  
-    }
+   
     var j = 0; 
     var imgArray2 = [
         "photoSlider1.jpg",
