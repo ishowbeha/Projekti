@@ -20,6 +20,10 @@ p{
     border: none;
     border-radius: 15px;
 }
+#butoniLogIn:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
 #home {
     background-image: url("Foto_Kryesore.jpg");
     background-size: cover; 
@@ -187,8 +191,9 @@ div #kategoritText{
 }
 
 .categories-grid {
-    display: grid; /* Aktivizon grid-in */
-    grid-template-columns: repeat(5, 1fr); /* 5 kolona të barabarta */
+    display: flex; /* Aktivizon grid-in */
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 10px; /* Distancë mes fotove */
     padding: 10px; /* Hapësirë rreth rrjetit */
 }
@@ -207,6 +212,8 @@ div #kategoritText{
     overflow: hidden;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    width: 220px;
+    height: 300px;
    
 }
 

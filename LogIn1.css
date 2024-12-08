@@ -32,6 +32,7 @@ h2 {
 }
 .inputet:focus {
     outline: none;
+    border: 2px solid #0a2540;
 }
 .butoni {
     width: 100%;
@@ -47,6 +48,7 @@ h2 {
 .butoni:hover {
     background-color: #0a2540;
 }
+
 .signup-link {
     display: block;
     text-align: center;

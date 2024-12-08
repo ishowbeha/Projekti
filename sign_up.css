@@ -35,11 +35,11 @@ h2 {
     margin-bottom: 14px;
 }
 .inputet:focus {
-    border-color: #0a2540;
+    border:2px solid  #0a2540;
     outline: none;
 }
 .inputetConfirmPassword:focus {
-    border-color: #0a2540;
+    border:2px solid  #0a2540;
     outline: none;
 }
 .input-container {
