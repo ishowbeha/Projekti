@@ -60,6 +60,7 @@
     </div>
   </footer>
   <script>
+
   document.addEventListener("DOMContentLoaded", function(ngjarja) {
     const SubmitButon = document.getElementById('btn');
     
@@ -68,13 +69,13 @@
             var username = document.getElementById("userid").value;
             var password = document.getElementById("pass").value;
 
-            if (username == "" && username==null) {
+            if (username === "") {
                 alert("Emri i përdoruesit është i detyrueshëm.");
                 return false;
             }
 
 
-            if (password == "" && username==null) {
+            if (password === "") {
                 alert("Fjalëkalimi është i detyrueshëm.");
                 return false;
             }
