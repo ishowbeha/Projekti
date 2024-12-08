@@ -22,6 +22,10 @@ form{
 h2 {
     text-align: center;
     margin-bottom: 20px;
+    color: #0a2540;
+}
+p{
+    color: #0a2540;
 }
 .inputet {
     width: 93%;
@@ -49,15 +53,15 @@ h2 {
     background-color: #0a2540;
 }
 
-.signup-link {
+#signup-link {
     display: block;
     text-align: center;
     margin-top: 15px;
 }
-.signup-link a {
+#signup-link a {
     color: rgb(124, 171, 184);
     text-decoration: none;
 }
-.signup-link a:hover {
+#signup-link a:hover {
     text-decoration: underline;
 }
