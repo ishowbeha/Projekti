@@ -30,10 +30,10 @@
     <div class="c">
     <div class="signup-container">
         <h2>Sign Up</h2>
-        <form action="#">
+        <form action="Backend/Register.php" method="POST">
             <div class="input-container">
-                <input type="text" class="inputet" placeholder="First Name" id="emri" name="firstname" required>
-                <input type="text" class="inputet" placeholder="Last Name"  id="mbiemri" name="lastname" required>
+                <input type="text" class="inputet" placeholder="First Name" id="emri" name="name" required>
+                <input type="text" class="inputet" placeholder="Last Name"  id="mbiemri" name="surname" required>
             </div>
             
             <input type="email" class="inputet" placeholder="Email"         id="email"name="email" required>
@@ -48,7 +48,7 @@
                 </div>
             </div>
             <div class="birthday-container">
-                <select name="day" required>
+                <select name="dob_day" required>
                     <option value="" disabled selected>Day</option>
                     <!-- Ditët nga 1 në 31 -->
                     <option value="1">1</option>
@@ -84,7 +84,7 @@
                     <option value="31">31</option>
                 </select>
 
-                <select name="month" required>
+                <select name="dob_month" required>
                     <option value="" disabled selected>Month</option>
                     <option value="January">January</option>
                     <option value="February">February</option>
@@ -100,7 +100,7 @@
                     <option value="December">December</option>
                 </select>
                 
-                <select name="year" required>
+                <select name="dob_year" required>
                     <option value="" disabled selected>Year</option>
                     <!-- Vitet nga 2000 në 2024 -->
                     <option value="2000">2000</option>
