@@ -7,10 +7,10 @@ class User {
         $this->conn = $db;
     }
 
-    public function register($name, $surname, $email, $password, $gender, $dob_day, $dob_month, $dob_year,) {
-        $query = "INSERT INTO {$this->table_name} (name, surname, email, password, gender, dob_day, dob_month, dob_year) 
+    public function register($name, $surname, $email, $password, $gender, $dob_day, $dob_month, $dob_year) {
+        $query = "INSERT INTO {$this->table_name} 
+                  (name, surname, email, password, gender, dob_day, dob_month, dob_year) 
                   VALUES (:name, :surname, :email, :password, :gender, :dob_day, :dob_month, :dob_year)";
-     
         $stmt = $this->conn->prepare($query);
     
         // Bind parameters
