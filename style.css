@@ -365,37 +365,7 @@ div .category-link{
 #p , #a{
     color: white;
 }
-.hamburger {
-    display: none; /* Hide by default */
-    font-size: 30px;
-    cursor: pointer;
-}
 
-/* Navigation links */
-#nav-links {
-    display: flex;
-}
-
-#nav-links a {
-    color: white;
-    margin: 0 1rem;
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-#nav-links {
-    display: flex;
-}
-
-#nav-links a {
-    color: white;
-    margin: 0 1rem;
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
 .slider-seksioni {
     display: flex;
     flex-direction: column; /* Stack elements vertically on smaller screens */
@@ -408,6 +378,74 @@ div .category-link{
     margin: auto; /* Center the section */
 }
 
+.hamburger {
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px; /* Width of the hamburger */
+    height: 30px; /* Height of the hamburger */
+}
+
+.bar {
+    height: 4px; /* Height of each bar */
+    width: 100%; /* Full width */
+    background-color: white; /* Bar color */
+    margin: 2px 0; /* Space between bars */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Navigation links styles */
+#nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#nav-links a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Active class for nav links */
+#nav-links.active {
+    display: block; /* Show links when active */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* Show hamburger on small screens */
+    }
+
+    #nav-links {
+        display: none; /* Hide links by default on small screens */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Positioning */
+        top: 60px; /* Position below the header */
+        left: 0;
+        right: 0;
+        background-color: #444; /* Background color for dropdown */
+        padding: 10px 0; /* Padding */
+        z-index: 1000; /* Ensure it appears above other content */
+    }
+
+    #nav-links.active {
+        display: flex; /* Show links when active */
+    }
+
+    #nav-links a {
+        padding: 10px 20px; /* Add padding to links */
+        border-bottom: 1px solid #555; /* Optional: add a border between links */
+    }
+
+    #nav-links a:hover {
+        background-color: #555; /* Change background on hover */
+    }
+}
 /* Responsive adjustments */
 @media (min-width: 576px) {
     .slider-seksioni {
@@ -433,32 +471,6 @@ div .category-link{
         padding: 250px; /* Use even larger padding on extra-large screens */
     }
 }
-/* Responsive styles */
-@media (max-width: 768px) {
-    .hamburger {
-        display: block; /* Show hamburger on small screens */
-    }
-
-    #nav-links {
-        display: none; /* Hide links by default */
-        flex-direction: column;
-        position: absolute;
-        top: 60px; /* Adjust based on your header height */
-        right: 0;
-        background-color: #0a2540; /* Background color for dropdown */
-        width: 100%; /* Full width */
-        padding: 1rem 0; /* Add some padding */
-    }
-
-    #nav-links.active {
-        display: flex; /* Show links when active */
-    }
-
-    #nav-links a {
-        margin: 10px 0; /* Spacing for vertical links */
-        padding: 10px 20px; /* Add padding for better touch targets */
-        font-size: 1rem; /* Adjust font size */
-    }
 
     #loginDiv {
         margin-top: 10px; /* Adjust login button position */
@@ -469,7 +481,7 @@ div .category-link{
         width: 100%; /* Full width on mobile */
         margin: 0; /* Remove margin */
     }
-}
+
 
 /* Additional responsive styles for other sections */
 @media (max-width: 768px) {
