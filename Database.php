@@ -1,7 +1,7 @@
 <?php
 class Database {
     private $host = 'localhost';
-    private $dbname = 'projekti';
+    private $dbname = 'projekti_web';
     private $username = 'root'; // Change this as per your configuration
     private $password = ''; // Change this as per your configuration
     private $conn;

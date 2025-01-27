@@ -85,21 +85,12 @@ label,p {
     border: 1px solid #ccc;
     border-radius: 7px;
 }
-.inputetConfirmPassword {
-    width: 93%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 7px;
-    margin-bottom: 14px;
-}
+
 .inputet:focus {
     border:2px solid  #0a2540;
     outline: none;
 }
-.inputetConfirmPassword:focus {
-    border:2px solid  #0a2540;
-    outline: none;
-}
+
 .input-container {
     display: flex;
     justify-content: space-between;
