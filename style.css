@@ -139,11 +139,12 @@ div #ShikoMEShumeID{
     margin: 71px 0px 44px 0px;
 }
 #kontenti #slideshow {
-    width: 659px;
-    height: 430px;
+    width: 100%; /* Make the slideshow take the full width of its container */
+    max-width: 659px; /* Set a maximum width for larger screens */
+    height: 250px; /* Set a fixed height for the slideshow */
     border-radius: 10px;
-    object-fit: cover;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
 }
 
 .next-btn {
@@ -363,4 +364,120 @@ div .category-link{
   }
 #p , #a{
     color: white;
+}
+.hamburger {
+    display: none; /* Hide by default */
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Navigation links */
+#nav-links {
+    display: flex;
+}
+
+#nav-links a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+#nav-links {
+    display: flex;
+}
+
+#nav-links a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.slider-seksioni {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Reduce padding for smaller screens */
+    background-color: white;
+    border-radius: 23px;
+    max-width: 1200px; /* Set a maximum width for larger screens */
+    margin: auto; /* Center the section */
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .slider-seksioni {
+        padding: 250px; /* Use larger padding on larger screens */
+        flex-direction: row; /* Align items in a row on larger screens */
+    }
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger on small screens */
+    }
+
+    #nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust based on your header height */
+        right: 0;
+        background-color: #0a2540; /* Background color for dropdown */
+        width: 100%; /* Full width */
+        padding: 1rem 0; /* Add some padding */
+    }
+
+    #nav-links.active {
+        display: flex; /* Show links when active */
+    }
+
+    #nav-links a {
+        margin: 10px 0; /* Spacing for vertical links */
+        padding: 10px 20px; /* Add padding for better touch targets */
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    #loginDiv {
+        margin-top: 10px; /* Adjust login button position */
+        text-align: center; /* Center the login button */
+    }
+
+    #butoniLogIn {
+        width: 100%; /* Full width on mobile */
+        margin: 0; /* Remove margin */
+    }
+}
+
+/* Additional responsive styles for other sections */
+@media (max-width: 768px) {
+    .categories-grid {
+        flex-direction: column; /* Stack categories vertically */
+        align-items: center; /* Center align */
+    }
+
+    .category-card {
+        width: 90%; /* Full width for cards on mobile */
+        margin-bottom: 20px; /* Space between cards */
+    }
+
+    .slider-container {
+        flex-direction: column; /* Stack slider elements vertically */
+        align-items: center; /* Center align */
+    }
+
+    .slider-informacion {
+        width: 100%; /* Full width for slider info */
+        text-align: center; /* Center text */
+    }
+
+    .slider img {
+        height: auto; /* Maintain aspect ratio */
+        max-width: 100%; /* Responsive image */
+        height: 210px;
+    }
 }
