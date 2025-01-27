@@ -23,7 +23,11 @@ document.addEventListener("DOMContentLoaded", function(ngjarja) {
             password.focus();
             return false;
         }
+<<<<<<< Updated upstream
        
+=======
+
+>>>>>>> Stashed changes
         if(email.value === ""){
             alert("Ju lutem shtoni EMAIL tuaj");
             email.focus();
@@ -48,4 +52,7 @@ document.addEventListener("DOMContentLoaded", function(ngjarja) {
     
 });
 
-
+function toggleMenu() {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('active');
+}

@@ -409,10 +409,28 @@ div .category-link{
 }
 
 /* Responsive adjustments */
+@media (min-width: 576px) {
+    .slider-seksioni {
+        padding: 40px; /* Increase padding for small devices */
+    }
+}
+
 @media (min-width: 768px) {
     .slider-seksioni {
-        padding: 250px; /* Use larger padding on larger screens */
-        flex-direction: row; /* Align items in a row on larger screens */
+        padding: 100px; /* Use larger padding on medium screens */
+        flex-direction: row; /* Align items in a row on medium screens */
+    }
+}
+
+@media (min-width: 992px) {
+    .slider-seksioni {
+        padding: 150px; /* Use larger padding on large screens */
+    }
+}
+
+@media (min-width: 1200px) {
+    .slider-seksioni {
+        padding: 250px; /* Use even larger padding on extra-large screens */
     }
 }
 /* Responsive styles */

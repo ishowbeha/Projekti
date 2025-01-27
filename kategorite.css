@@ -109,6 +109,70 @@ h1 {
 #p , #a{
     color: white;
 }
+.hamburger {
+    display: none; /* Hide by default */
+    font-size: 30px;
+    color: white; /* Set color to white */
+    cursor: pointer;
+}
+
+/* Navigation links */
+#nav-links {
+    display: flex;
+}
+
+#nav-links a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger on small screens */
+    }
+
+    #nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust based on your header height */
+        right: 0;
+        background-color: #0a2540; /* Background color for dropdown */
+        width: 100%; /* Full width */
+        padding: 1rem 0; /* Add some padding */
+    }
+
+    #nav-links.active {
+        display: flex; /* Show links when active */
+    }
+
+    #nav-links a {
+        margin: 10px 0; /* Spacing for vertical links */
+        padding: 10px 20px; /* Add padding for better touch targets */
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    #loginDiv {
+        margin-top: 10px; /* Adjust login button position */
+        text-align: center; /* Center the login button */
+    }
+
+    #butoniLogIn {
+        width: 100%; /* Full width on mobile */
+        margin: 0; /* Remove margin */
+    }
+}
+@media (min-width: 1033px){
+    .slider-container{
+        display: flex;
+        flex-direction: column;
+    }
+}
 @media (max-width: 1200px) {
     .KutiaKryesore{
         grid-template-columns: repeat(3, 1fr);
@@ -124,4 +188,5 @@ h1 {
         grid-template-columns: 1fr;
     }
 }
+
    
