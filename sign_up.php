@@ -31,7 +31,7 @@
     <div class="c">
     <div class="signup-container">
         <h2>Sign Up</h2>
-        <form action="Register.php" method="POST" >
+        <form action="registerController.php" method="POST">
             <div class="input-container">
                 <input type="text" class="inputet" placeholder="First Name" id="emri" name="name" required>
                 <input type="text" class="inputet" placeholder="Last Name"  id="mbiemri" name="surname" required>
@@ -49,7 +49,7 @@
                 </div>
             </div>
             <div class="birthday-container">
-                <select name="dob_day" required>
+                <select name="day" required>
                     <option value="" disabled selected>Day</option>
                     <!-- Ditët nga 1 në 31 -->
                     <option value="1">1</option>
@@ -85,7 +85,7 @@
                     <option value="31">31</option>
                 </select>
 
-                <select name="dob_month" required>
+                <select name="month" required>
                     <option value="" disabled selected>Month</option>
                     <option value="January">January</option>
                     <option value="February">February</option>
@@ -101,7 +101,7 @@
                     <option value="December">December</option>
                 </select>
                 
-                <select name="dob_year" required>
+                <select name="year" required>
                     <option value="" disabled selected>Year</option>
                     <!-- Vitet nga 2000 në 2024 -->
                     <option value="2000">2000</option>
@@ -139,7 +139,9 @@
             <option value="admin">Admin</option>
            </select>
            </div>
-            <button type="submit" class="butoni" id="btn">Sign Up</button>
+           <form action="registerController.php" method="POST">
+    <button type="submit" name="registerBtn" class="butoni" id="btn">Sign Up</button>
+</form>
         </form>
         <div class="login-link">
             <p>Already have an account? <a href="logIn1.html">Login</a></p> <!-- Linku për Login -->
@@ -166,5 +168,8 @@
         </div>
       </footer>
     <script src="sign_up.js"></script>
+    <?php
+    include_once 'registerController.php';
+    ?>
 </body>
 </html>
