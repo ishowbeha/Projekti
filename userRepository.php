@@ -39,7 +39,7 @@ class UserRepository {
     function getAllUsers() {
         $conn = $this->connection;
 
-        $sql = "SELECT * FROM user";
+        $sql = "SELECT * FROM users";
 
         $statement = $conn->query($sql); 
         $users = $statement->fetchAll(); 
@@ -47,12 +47,19 @@ class UserRepository {
         return $users; 
     }
 
+    function getUserByEmail($email) {
+        $conn = $this->connection;
+        $sql = "SELECT email, password FROM users WHERE email = ?";
+        $statement = $conn->prepare($sql);
+        $statement->execute([$email]);
+        return $statement->fetch(PDO::FETCH_ASSOC); // Kthen associative array
+    }
     
     function getUserById($id) {
         $conn = $this->connection;
 
      
-        $sql = "SELECT * FROM user WHERE id='$id'";
+        $sql = "SELECT * FROM users WHERE id='$id'";
 
         $statement = $conn->query($sql); 
         $user = $statement->fetch(); 
@@ -79,7 +86,7 @@ class UserRepository {
         $conn = $this->connection;
 
       
-        $sql = "DELETE FROM user WHERE id=?";
+        $sql = "DELETE FROM users WHERE id=?";
 
         $statement = $conn->prepare($sql); 
 

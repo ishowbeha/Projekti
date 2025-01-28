@@ -1,3 +1,37 @@
+<?php
+session_start();
+ob_start();
+
+include_once 'databaseConnection.php';
+include_once 'userRepository.php';
+
+if (isset($_SESSION['email'])) {
+    header("Location: index.html"); 
+    exit();
+}
+
+$error_message = "";
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $email = trim($_POST['email']);
+    $password = trim($_POST['password']);
+
+    $userRepo = new UserRepository();
+    $user = $userRepo->getUserByEmail($email);
+
+    if ($user && password_verify($password, $user['password'])) {
+        $_SESSION['email'] = $user['email']; 
+
+        header("Location: index.html");
+        exit();
+    } else {
+        $error_message = "Email ose fjalëkalimi është gabim!";
+    }
+}
+
+ob_end_flush();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,17 +58,17 @@
                 <a href="index.html#footer">Contact Us</a>
             </nav>
             <div id="loginDiv">
-                <a href="LogIn1.html"><button id="butoniLogIn">Log In</button></a>
+                <a href="LogIn1.php"><button id="butoniLogIn">Log In</button></a>
             </div>
         </div>
     </header>
 <div class="c">
     <div class="container">
         <h2>Login</h2>
-        <form action="LogIn.php" method="POST">
+        <form action="LogIn1.php" method="POST">
             <input type="email" class="inputet" id="userid" placeholder="Email" name="email" required size="20">
             <input type="password" class="inputet" id="pass" placeholder="Password" name="password" required size="15">
-            <button type="submit" class="butoni" id="btn">Login</button>
+            <button type="submit" class="butoni" name="loginBtn" id="btn">Login</button>
         </form>
         <div id="signup-link">
             <p>Don't have an account? <a href="sign_up.php">Sign Up</a></p> 
@@ -87,5 +121,6 @@
         SubmitButon.addEventListener('click', validate);
     });
   </script>
+ 
 </body>
 </html>

@@ -1,6 +1,7 @@
 <?php
 session_start();
+session_unset();
 session_destroy();
-header("Location: LogIn.php"); // Redirect to login page after logout
-exit;
+header("Location: LogIn1.php");
+exit();
 ?>
