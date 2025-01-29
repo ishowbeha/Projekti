@@ -1,9 +1,14 @@
+<?php
+include 'session.php';
+checkLogin();
+include 'session_control.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sofa</title>
+    <title>Wardrobe</title>
     <link rel="stylesheet" href="kategorite.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,7 +17,7 @@
         <div class="navbar">
             <div class="hamLogoSwitch">
             <div class="logo">
-                <a id="aeLogos" href="index.html">
+                <a id="aeLogos" href="index.php">
                      <img id="logo1" src="Icons/LogoKryesorePaBackground.png" alt="Logo" /></a>
                 </div>
                 <div class="hamburger" onclick="toggleMenu()">
@@ -20,112 +25,112 @@
                 </div>
                 </div>
             <nav id="nav-links">
-                <a href="index.html">Home</a>
-                <a href="index.html#categories">Category</a>
-                <a href="index.html#slider-seksioni">Offerts</a>
-                <a href="index.html#footer">Contact Us</a>
+                <a href="index.php">Home</a>
+                <a href="index.php#categories">Category</a>
+                <a href="index.php#slider-seksioni">Offerts</a>
+                <a href="index.php#footer">Contact Us</a>
             </nav>
             <div id="loginDiv">
-                <a href="LogIn1.html"><button id="butoniLogIn">Log In</button></a>
+                <a href="LogIn1.php"><button id="butoniLogIn">Log In</button></a>
             </div>
         </div>
     </header>
 
-    <h1>Sofas</h1>
+    <h1>Wardrobes</h1>
     <div class="KutiaKryesore">
       
         <div class="kutia">
-            <img src="SofasPage/1.jpg" alt="Sofa 1">
+            <img src="WardrobesPage/1.jpg" alt="Wardrobe 1">
             <p class="price">$199.00</p>
             <button class="butoniBuy">Buy Now</button>
         </div>
         
         <div class="kutia">
-            <img src="SofasPage/2.jpg" alt="Sofa 2">
+            <img src="WardrobesPage/2.jpg" alt="Wardrobe 2">
             <p class="cmimi">$249.00</p>
             <button class="butoniBuy">Buy Now</button>
         </div>
       
         <div class="kutia">
-            <img src="SofasPage/3.jpg" alt="Sofa 3">
+            <img src="WardrobesPage/3.jpg" alt="Wardrobe 3">
             <p class="cmimi">$299.00</p>
             <button class="butoniBuy">Buy Now</button>
         </div>
         
         <div class="kutia">
-            <img src="SofasPage/4.jpg" alt="Sofa 4">
+            <img src="WardrobesPage/4.jpg" alt="Wardrobe 4">
             <p class="cmimi">$399.00</p>
             <button class="butoniBuy">Buy Now</button>
         </div>
      
         <div class="kutia">
-            <img src="SofasPage/5.jpg" alt="Sofa 5">
+            <img src="WardrobesPage/5.jpg" alt="Wardrobe 5">
             <p class="cmimi">$199.00</p>
             <button class="butoniBuy">Buy Now</button>
         </div>
  
         <div class="kutia">
-            <img src="SofasPage/6.jpg" alt="Sofa 6">
+            <img src="WardrobesPage/6.jpg" alt="Wardrobe 6">
             <p class="cmimi">$249.00</p>
             <button class="butoniBuy">Buy Now</button>
         </div>
        
         <div class="kutia">
-            <img src="SofasPage/7.jpg" alt="Sofa 7">
+            <img src="WardrobesPage/7.jpg" alt="Wardrobe 7">
             <p class="cmimi">$299.00</p>
             <button class="butoniBuy">Buy Now</button>
         </div>
        
         <div class="kutia">
-            <img src="SofasPage/8.jpg" alt="Sofa 8">
+            <img src="WardrobesPage/8.jpg" alt="Wardrobe 8">
             <p class="cmimi">$399.00</p>
             <button class="butoniBuy">Buy Now</button>
         </div>
      
         <div class="kutia">
-            <img src="SofasPage/9.jpg" alt="Sofa 9">
+            <img src="WardrobesPage/9.jpg" alt="Wardrobe 9">
             <p class="cmimi">$199.00</p>
             <button class="butoniBuy">Buy Now</button>
         </div>
      
         <div class="kutia">
-            <img src="SofasPage/10.jpg" alt="Sofa 10">
+            <img src="WardrobesPage/10.jpg" alt="Wardrobe 10">
             <p class="cmimi">$249.00</p>
             <button class="butoniBuy">Buy Now</button>
         </div>
       
         <div class="kutia">
-            <img src="SofasPage/11.jpg" alt="Sofa 11">
+            <img src="WardrobesPage/16.jpg" alt="Wardrobe 11">
             <p class="cmimi">$299.00</p>
             <button class="butoniBuy">Buy Now</button>
         </div>
        
         <div class="kutia">
-            <img src="SofasPage/12.jpg" alt="Sofa 12">
+            <img src="WardrobesPage/13.jpg" alt="Wardrobe 12">
             <p class="cmimi">$399.00</p>
             <button class="butoniBuy">Buy Now</button>
         </div>
      
         <div class="kutia">
-            <img src="SofasPage/13.jpg" alt="Sofa 13">
+            <img src="WardrobesPage/12.jpg" alt="Wardrobe 13">
             <p class="cmimi">$199.00</p>
             <button class="butoniBuy">Buy Now</button>
         </div>
        
         <div class="kutia">
-            <img src="SofasPage/14.jpg" alt="Sofa 14">
+            <img src="WardrobesPage/14.jpg" alt="Wardrobe 14">
             <p class="cmimi">$249.00</p>
             <button class="butoniBuy">Buy Now</button>
         </div>
       
         <div class="kutia">
-            <img src="SofasPage/15.jpg" alt="Sofa 15">
+            <img src="WardrobesPage/15.jpg" alt="Wardrobe 15">
             <p class="cmimi">$299.00</p>
             <button class="butoniBuy">Buy Now</button>
         </div>
       
         <div class="kutia">
-            <img src="SofasPage/16.jpg" alt="Sofa 16">
+            <img src="WardrobesPage/11.jpg" alt="Wardrobe 16">
             <p class="cmimi">$399.00</p>
             <button class="butoniBuy">Buy Now</button>
         </div>

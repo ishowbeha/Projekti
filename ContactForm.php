@@ -1,5 +1,10 @@
 
 <!--Ketu gjnedet komplet kodi i kontakt form, ne menyre qe te mos krijohen shume files-->
+<?php
+include 'session.php';
+checkLogin();
+include 'session_control.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,7 +62,7 @@
         <div class="navbar">
             <div class="hamLogoSwitch">
             <div class="logo">
-                <a id="aeLogos" href="index.html">
+                <a id="aeLogos" href="index.php">
                      <img id="logo1" src="Icons/LogoKryesorePaBackground.png" alt="Logo" /></a>
                 </div>
                 <div class="hamburger" onclick="toggleMenu()">
@@ -65,13 +70,13 @@
                 </div>
                 </div>
             <nav id="nav-links">
-                <a href="index.html">Home</a>
-                <a href="index.html#categories">Category</a>
-                <a href="index.html#slider-seksioni">Offerts</a>
-                <a href="index.html#footer">Contact Us</a>
+                <a href="index.php">Home</a>
+                <a href="index.php#categories">Category</a>
+                <a href="index.php#slider-seksioni">Offerts</a>
+                <a href="index.php#footer">Contact Us</a>
             </nav>
             <div id="loginDiv">
-                <a href="LogIn1.html"><button id="butoniLogIn">Log In</button></a>
+                <a href="LogIn1.php"><button id="butoniLogIn">Log In</button></a>
             </div>
         </div>
     </header>

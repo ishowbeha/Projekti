@@ -217,15 +217,15 @@
 <header class="header">
     <div class="navbar">
         <div class="logo">
-            <a href="index.html">
+            <a href="index.php">
                 <img src="Icons/LogoKryesorePaBackground.png" alt="Logo">
             </a>
         </div>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="index.html#categories">Category</a>
-            <a href="index.html#slider-seksioni">Offers</a>
-            <a href="index.html#footer">Contact Us</a>
+            <a href="index.php">Home</a>
+            <a href="index.php#categories">Category</a>
+            <a href="index.php#slider-seksioni">Offers</a>
+            <a href="index.php#footer">Contact Us</a>
         </nav>
         <div id="loginDiv">
             <a href="LogIn1.php"><button id="butoniLogIn">Log In</button></a>
@@ -252,6 +252,8 @@
             </tr>
 
             <?php 
+            include 'session.php';
+            checkAdmin();
             include_once 'userRepository.php';
             $userRepository = new UserRepository();
             $users = $userRepository->getAllUsers(); 

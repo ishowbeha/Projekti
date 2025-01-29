@@ -1,3 +1,8 @@
+<?php
+include 'session.php';
+checkLogin();
+include 'session_control.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +19,7 @@
         <div class="navbar">
             <div class="hamLogoSwitch">
             <div class="logo">
-                <a id="aeLogos" href="index.html">
+                <a id="aeLogos" href="index.php">
                      <img id="logo1" src="Icons/LogoKryesorePaBackground.png" alt="Logo" /></a>
                 </div>
                 <div class="hamburger" onclick="toggleMenu()">
@@ -22,13 +27,20 @@
                 </div>
                 </div>
             <nav id="nav-links">
-                <a href="index.html">Home</a>
-                <a href="index.html#categories">Category</a>
-                <a href="index.html#slider-seksioni">Offerts</a>
-                <a href="index.html#footer">Contact Us</a>
+                <a href="index.php">Home</a>
+                <a href="index.php#categories">Category</a>
+                <a href="index.php#slider-seksioni">Offerts</a>
+                <a href="index.php#footer">Contact Us</a>
+                <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
+                <a href="dashboard.php">Dashboard</a> 
+                <?php endif; ?>
             </nav>
             <div id="loginDiv">
-                <a href="LogIn1.php"><button id="butoniLogIn">Log In</button></a>
+                <?php if (isset($_SESSION['email'])): ?>
+                    <a href="logout.php"><button id="butoniLogout">Logout</button></a>
+                <?php else: ?>
+                    <a href="LogIn1.php"><button id="butoniLogIn">Log In</button></a>
+                <?php endif; ?>
             </div>
         </div>
     </header>
@@ -63,7 +75,7 @@
     
         <div class="categories-grid">
             <!-- Chair-->
-            <a href="Chair.html" class="category-link">
+            <a href="Chair.php" class="category-link">
                 <div class="category-card">
                     <img src="Icons/ChairLogo.png" alt="Chair">
                     <h3>Chair</h3>
@@ -72,7 +84,7 @@
             </a>
     
             <!-- Sofa -->
-            <a href="Sofa.html"  class="category-link">
+            <a href="Sofa.php"  class="category-link">
                 <div class="category-card">
                     <img src="Icons/SofaLogo.png" alt="Sofa">
                     <h3>Sofa</h3>
@@ -82,7 +94,7 @@
             </a>
     
             <!-- Bedroom-->
-            <a href="BedRoom.html" class="category-link">
+            <a href="BedRoom.php" class="category-link">
                 <div class="category-card">
                     <img src="Icons/BedroomLogo.png" alt="Bedroom">
                     <h3>Bedroom</h3>
@@ -92,7 +104,7 @@
             </a>
     
             <!-- Table -->
-            <a href="Table.html" class="category-link">
+            <a href="Table.php" class="category-link">
                 <div class="category-card">
                     <img src="Icons/TableLogo.png" alt="Table">
                     <h3>Table</h3>
@@ -102,7 +114,7 @@
             </a>
     
             <!-- Wardrobe-->
-            <a href="Wardrobe.html" class="category-link">
+            <a href="Wardrobe.php" class="category-link">
                 <div class="category-card">
                     <img src="Icons/WardrobeLogo.png" alt="Bed">
                     <h3>Wardrobes</h3>
@@ -145,7 +157,7 @@
         </div>
     
         <div id="contactForm" class="contact-form-link">
-            <p ><a id="a" href="ContactForm.html">Click here to contact us</a></p>
+            <p ><a id="a" href="ContactForm.php">Click here to contact us</a></p>
         </div>
       </footer>
 

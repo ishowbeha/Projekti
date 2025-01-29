@@ -1,10 +1,17 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['email'])) {
-    header("Location: LogIn1.php");
-    exit();
+function checkLogin() {
+    if (!isset($_SESSION['email'])) {
+        header("Location: sign_up.php"); 
+        exit();
+    }
 }
 
-$user_email = $_SESSION['email']; // Merr email-in nga sesioni
+function checkAdmin() {
+    if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
+        header("Location: index.php"); 
+        exit();
+    }
+}
 ?>

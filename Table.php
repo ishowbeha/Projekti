@@ -1,9 +1,14 @@
+<?php
+include 'session.php';
+checkLogin();
+include 'session_control.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wardrobe</title>
+    <title>Table</title>
     <link rel="stylesheet" href="kategorite.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,7 +17,7 @@
         <div class="navbar">
             <div class="hamLogoSwitch">
             <div class="logo">
-                <a id="aeLogos" href="index.html">
+                <a id="aeLogos" href="index.php">
                      <img id="logo1" src="Icons/LogoKryesorePaBackground.png" alt="Logo" /></a>
                 </div>
                 <div class="hamburger" onclick="toggleMenu()">
@@ -20,112 +25,112 @@
                 </div>
                 </div>
             <nav id="nav-links">
-                <a href="index.html">Home</a>
-                <a href="index.html#categories">Category</a>
-                <a href="index.html#slider-seksioni">Offerts</a>
-                <a href="index.html#footer">Contact Us</a>
+                <a href="index.php">Home</a>
+                <a href="index.php#categories">Category</a>
+                <a href="index.php#slider-seksioni">Offerts</a>
+                <a href="index.php#footer">Contact Us</a>
             </nav>
             <div id="loginDiv">
-                <a href="LogIn1.html"><button id="butoniLogIn">Log In</button></a>
+                <a href="LogIn1.php"><button id="butoniLogIn">Log In</button></a>
             </div>
         </div>
     </header>
 
-    <h1>Wardrobes</h1>
+    <h1>Tables</h1>
     <div class="KutiaKryesore">
       
         <div class="kutia">
-            <img src="WardrobesPage/1.jpg" alt="Wardrobe 1">
+            <img src="TabelsPage/1.jpg" alt="Table 1">
             <p class="price">$199.00</p>
             <button class="butoniBuy">Buy Now</button>
         </div>
         
         <div class="kutia">
-            <img src="WardrobesPage/2.jpg" alt="Wardrobe 2">
+            <img src="TabelsPage/2.jpg" alt="Table 2">
             <p class="cmimi">$249.00</p>
             <button class="butoniBuy">Buy Now</button>
         </div>
       
         <div class="kutia">
-            <img src="WardrobesPage/3.jpg" alt="Wardrobe 3">
+            <img src="TabelsPage/3.jpg" alt="Table 3">
             <p class="cmimi">$299.00</p>
             <button class="butoniBuy">Buy Now</button>
         </div>
         
         <div class="kutia">
-            <img src="WardrobesPage/4.jpg" alt="Wardrobe 4">
+            <img src="TabelsPage/4.jpg" alt="Table 4">
             <p class="cmimi">$399.00</p>
             <button class="butoniBuy">Buy Now</button>
         </div>
      
         <div class="kutia">
-            <img src="WardrobesPage/5.jpg" alt="Wardrobe 5">
+            <img src="TabelsPage/5.jpg" alt="Table 5">
             <p class="cmimi">$199.00</p>
             <button class="butoniBuy">Buy Now</button>
         </div>
  
         <div class="kutia">
-            <img src="WardrobesPage/6.jpg" alt="Wardrobe 6">
+            <img src="TabelsPage/6.jpg" alt="Table 6">
             <p class="cmimi">$249.00</p>
             <button class="butoniBuy">Buy Now</button>
         </div>
        
         <div class="kutia">
-            <img src="WardrobesPage/7.jpg" alt="Wardrobe 7">
+            <img src="TabelsPage/7.jpg" alt="Table 7">
             <p class="cmimi">$299.00</p>
             <button class="butoniBuy">Buy Now</button>
         </div>
        
         <div class="kutia">
-            <img src="WardrobesPage/8.jpg" alt="Wardrobe 8">
+            <img src="TabelsPage/8.jpg" alt="Table 8">
             <p class="cmimi">$399.00</p>
             <button class="butoniBuy">Buy Now</button>
         </div>
      
         <div class="kutia">
-            <img src="WardrobesPage/9.jpg" alt="Wardrobe 9">
+            <img src="TabelsPage/9.jpg" alt="Table 9">
             <p class="cmimi">$199.00</p>
             <button class="butoniBuy">Buy Now</button>
         </div>
      
         <div class="kutia">
-            <img src="WardrobesPage/10.jpg" alt="Wardrobe 10">
+            <img src="TabelsPage/10.jpg" alt="Table 10">
             <p class="cmimi">$249.00</p>
             <button class="butoniBuy">Buy Now</button>
         </div>
       
         <div class="kutia">
-            <img src="WardrobesPage/16.jpg" alt="Wardrobe 11">
+            <img src="TabelsPage/11.jpg" alt="Table 11">
             <p class="cmimi">$299.00</p>
             <button class="butoniBuy">Buy Now</button>
         </div>
        
         <div class="kutia">
-            <img src="WardrobesPage/13.jpg" alt="Wardrobe 12">
+            <img src="TabelsPage/12.jpg" alt="Table 12">
             <p class="cmimi">$399.00</p>
             <button class="butoniBuy">Buy Now</button>
         </div>
      
         <div class="kutia">
-            <img src="WardrobesPage/12.jpg" alt="Wardrobe 13">
+            <img src="TabelsPage/13.jpg" alt="Table 13">
             <p class="cmimi">$199.00</p>
             <button class="butoniBuy">Buy Now</button>
         </div>
        
         <div class="kutia">
-            <img src="WardrobesPage/14.jpg" alt="Wardrobe 14">
+            <img src="TabelsPage/14.jpg" alt="Table 14">
             <p class="cmimi">$249.00</p>
             <button class="butoniBuy">Buy Now</button>
         </div>
       
         <div class="kutia">
-            <img src="WardrobesPage/15.jpg" alt="Wardrobe 15">
+            <img src="TabelsPage/15.jpg" alt="Table 15">
             <p class="cmimi">$299.00</p>
             <button class="butoniBuy">Buy Now</button>
         </div>
       
         <div class="kutia">
-            <img src="WardrobesPage/11.jpg" alt="Wardrobe 16">
+            <img src="TabelsPage/16.jpg" alt="Table 16">
             <p class="cmimi">$399.00</p>
             <button class="butoniBuy">Buy Now</button>
         </div>
