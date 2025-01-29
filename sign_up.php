@@ -144,7 +144,7 @@
 </form>
         </form>
         <div class="login-link">
-            <p>Already have an account? <a href="logIn1.html">Login</a></p> <!-- Linku për Login -->
+            <p>Already have an account? <a href="logIn1.php">Login</a></p> <!-- Linku për Login -->
         </div>
     </div>
     </div>

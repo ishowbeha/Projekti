@@ -26,7 +26,7 @@ if (isset($_POST['registerBtn'])) {
 
         $userRepository = new UserRepository();
         $userRepository->insertUser($user);
-        header("Location: LogIn1.html");
+        header("Location: LogIn1.php");
         exit();
     }
 }
