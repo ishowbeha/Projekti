@@ -43,14 +43,17 @@ ob_end_flush();
 </head>
 <body>
     
-    <header class="header">
+<header class="header">
         <div class="navbar">
+            <div class="hamLogoSwitch">
             <div class="logo">
-                <img id="logo1" src="Icons/LogoKryesorePaBackground.png" alt="Logo" />
-            </div>
-            <div class="hamburger" onclick="toggleMenu()">
-                &#9776; <!-- This is the hamburger icon -->
-            </div>
+                <a id="aeLogos" href="index.html">
+                     <img id="logo1" src="Icons/LogoKryesorePaBackground.png" alt="Logo" /></a>
+                </div>
+                <div class="hamburger" onclick="toggleMenu()">
+                    &#9776; <!-- Kjo është ikona e hamburgerit -->
+                </div>
+                </div>
             <nav id="nav-links">
                 <a href="index.html">Home</a>
                 <a href="index.html#categories">Category</a>
@@ -120,6 +123,11 @@ ob_end_flush();
         }
         SubmitButon.addEventListener('click', validate);
     });
+
+    function toggleMenu() {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('active');
+}
   </script>
  
 </body>

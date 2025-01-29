@@ -382,8 +382,9 @@ div .category-link{
     display: none; /* Initially hidden */
     flex-direction: column;
     cursor: pointer;
+    font-size: 36px;
     width: 30px; /* Width of the hamburger */
-    height: 30px; /* Height of the hamburger */
+    height: 56px; /* Height of the hamburger */
 }
 
 .bar {
@@ -414,7 +415,13 @@ div .category-link{
 #nav-links.active {
     display: block; /* Show links when active */
 }
+.navbar .hamLogoSwitch{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-left: 20px;
 
+}
 /* Responsive styles */
 @media (max-width: 768px) {
     .hamburger {
@@ -425,10 +432,9 @@ div .category-link{
         display: none; /* Hide links by default on small screens */
         flex-direction: column; /* Stack links vertically */
         position: absolute; /* Positioning */
-        top: 60px; /* Position below the header */
+        top: 121px; /* Position below the header */
         left: 0;
-        right: 0;
-        background-color: #444; /* Background color for dropdown */
+        background-color: #0a2540; /* Background color for dropdown */
         padding: 10px 0; /* Padding */
         z-index: 1000; /* Ensure it appears above other content */
     }

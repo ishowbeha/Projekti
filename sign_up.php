@@ -11,12 +11,15 @@
     
     <header class="header">
         <div class="navbar">
+            <div class="hamLogoSwitch">
             <div class="logo">
-                <img id="logo1" src="Icons/LogoKryesorePaBackground.png" alt="Logo" />
-            </div>
-            <div class="hamburger" onclick="toggleMenu()">
-                &#9776; <!-- This is the hamburger icon -->
-            </div>
+                <a id="aeLogos" href="index.html">
+                     <img id="logo1" src="Icons/LogoKryesorePaBackground.png" alt="Logo" /></a>
+                </div>
+                <div class="hamburger" onclick="toggleMenu()">
+                    &#9776; <!-- Kjo është ikona e hamburgerit -->
+                </div>
+                </div>
             <nav id="nav-links">
                 <a href="index.html">Home</a>
                 <a href="index.html#categories">Category</a>
@@ -24,14 +27,14 @@
                 <a href="index.html#footer">Contact Us</a>
             </nav>
             <div id="loginDiv">
-                <a href="LogIn1.html"><button id="butoniLogIn">Log In</button></a>
+                <a href="LogIn1.php"><button id="butoniLogIn">Log In</button></a>
             </div>
         </div>
     </header>
     <div class="c">
     <div class="signup-container">
         <h2>Sign Up</h2>
-        <form action="registerController.php" method="POST">
+        <form id="form" action="registerController.php" method="POST">
             <div class="input-container">
                 <input type="text" class="inputet" placeholder="First Name" id="emri" name="name" required>
                 <input type="text" class="inputet" placeholder="Last Name"  id="mbiemri" name="surname" required>
@@ -168,6 +171,15 @@
         </div>
       </footer>
     <script src="sign_up.js"></script>
+
+    <script>
+    function toggleMenu() {
+        const navLinks = document.getElementById('nav-links');
+        navLinks.classList.toggle('active');
+    }
+  </script>
+
+    </script>
     <?php
     include_once 'registerController.php';
     ?>

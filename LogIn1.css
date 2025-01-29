@@ -144,6 +144,13 @@ p{
     transition: color 0.3s ease;
 }
 
+.navbar .hamLogoSwitch{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-left: 20px;
+
+}
 /* Responsive styles */
 @media (max-width: 768px) {
     .hamburger {
@@ -151,14 +158,14 @@ p{
     }
 
     #nav-links {
-        display: none; /* Hide links by default */
-        flex-direction: column;
-        position: absolute;
-        top: 60px; /* Adjust based on your header height */
-        right: 0;
+        display: none; /* Hide links by default on small screens */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Positioning */
+        top: 121px; /* Position below the header */
+        left: 0;
         background-color: #0a2540; /* Background color for dropdown */
-        width: 100%; /* Full width */
-        padding: 1rem 0; /* Add some padding */
+        padding: 10px 0; /* Padding */
+        z-index: 1000; /* Ensure it appears above other content */
     }
 
     #nav-links.active {
@@ -183,33 +190,4 @@ p{
 }
 
 
-/* Media Queries for Responsive Design */
-@media (min-width: 576px) {
-    .c .container {
-        padding: 20px; /* Adjust padding for small devices */
-    }
-}
 
-@media (min-width: 768px) {
-    .c .container {
-        padding: 30px; /* Default padding for medium devices */
-        width: 80%; /* Set width to 80% for medium devices */
-        max-width: 400px; /* Increase max-width for larger screens */
-    }
-}
-
-@media (min-width: 992px) {
-    .c .container {
-        padding: 40px; /* Increase padding for large devices */
-        width: 70%; /* Set width to 70% for large devices */
-        max-width: 500px; /* Further increase max-width for larger screens */
-    }
-}
-
-@media (min-width: 1200px) {
-    .c .container {
-        padding: 50px; /* Increase padding for extra-large devices */
-        width: 60%; /* Set width to 60% for extra-large devices */
-        max-width: 600px; /* Further increase max-width for larger screens */
-    }
-}
