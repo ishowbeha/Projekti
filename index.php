@@ -32,24 +32,27 @@ include 'session_control.php';
                 <a href="index.php#slider-seksioni">Offerts</a>
                 <a href="index.php#footer">Contact Us</a>
             </nav>
-            <div id="loginDiv">
+            <div style="pointer-events: none;" id="loginDiv">
             
             <?php if (isset($_SESSION['role']) && strtolower($_SESSION['role']) === 'admin'): ?>
-                <a href="dashboard.php">
-                    <button id="adminButton" style="background-color: #007bff; color: white; border: none; padding: 8px 20px 10px; font-size: 16px; cursor: pointer;">
+                <a style="display: inline-block;" href="dashboard.php">
+                    <button id="adminButton" style="background-color: #007bff; color: white; border: none; padding: 8px 20px 10px; font-size: 16px; cursor: pointer; pointer-events: auto;">
                             Admin Dashboard
                         </button>
                 </a>
                 <?php endif; ?>
                       
                 <?php if (isset($_SESSION['email'])): ?>
-                <a href="LogOut.php"><button style="    width: 95px;
+                <a style="display: inline-block;" href="LogOut.php"><button style="    width: 95px;
                 height: 35px;
                 background-color: white;
                 margin:0px 11px;
-                border: none;" id="butoniLogout">Logout</button></a>
+                border: none;
+                cursor: pointer;
+                pointer-events: auto;" id="butoniLogout">Log Out</button></a>
                 <?php else: ?>
-                    <a href="LogIn1.php"><button id="butoniLogIn">Log In</button></a>
+                    <a href="LogIn1.php" ><button id="butoniLogIn">Log In</button>
+                    </a>
                 <?php endif; ?>
             </div>
         </div>

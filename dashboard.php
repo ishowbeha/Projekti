@@ -136,6 +136,7 @@ include 'session_control.php';
             background-color: #ddd;
             transition: 0.3s;
         }
+       
 
         .edit-btn, .delete-btn {
             padding: 8px 12px;
@@ -248,16 +249,30 @@ include 'session_control.php';
             display: flex;    
             justify-content: flex-end;
             margin-bottom: 5px;" class="mbeshtjellsi">
-    <div style="width: 95px;
-            height: 35px;
-            background-color: orange;
-            margin: 0px 11px;
-            border: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;" id="createButton">
-    <a style="
-            color: white;" href="createUserForm.php">Create User</a>
+    <div style="width: 115px;
+    height: 35px;
+    background-color: orange;
+    margin: 0px 11px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    position: relative;"
+    onmouseover="this.style.backgroundColor='darkorange';" 
+    onmouseout="this.style.backgroundColor='orange';"
+    id="createButton">
+    <a style=" color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;" href="createUserForm.php">Create User</a>
     </div>
     </div>
     <div class="table-container">
