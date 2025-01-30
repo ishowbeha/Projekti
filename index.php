@@ -36,14 +36,18 @@ include 'session_control.php';
             
             <?php if (isset($_SESSION['role']) && strtolower($_SESSION['role']) === 'admin'): ?>
                 <a href="dashboard.php">
-                    <button id="adminButton" style="background-color: #007bff; color: white; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer;">
+                    <button id="adminButton" style="background-color: #007bff; color: white; border: none; padding: 8px 20px 10px; font-size: 16px; cursor: pointer;">
                             Admin Dashboard
                         </button>
                 </a>
                 <?php endif; ?>
                       
                 <?php if (isset($_SESSION['email'])): ?>
-                    <a href="LogOut.php"><button id="butoniLogout">Logout</button></a>
+                <a href="LogOut.php"><button style="    width: 95px;
+                height: 35px;
+                background-color: white;
+                margin:0px 11px;
+                border: none;" id="butoniLogout">Logout</button></a>
                 <?php else: ?>
                     <a href="LogIn1.php"><button id="butoniLogIn">Log In</button></a>
                 <?php endif; ?>

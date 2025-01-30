@@ -233,14 +233,33 @@ include 'session_control.php';
             <a href="index.php#footer">Contact Us</a>
         </nav>
         <div id="loginDiv">
-            <a href="LogOut.php"><button id="butoniLogout">Logout</button></a>
+            <a href="LogOut.php"><button style="    width: 95px;
+                height: 35px;
+                background-color: white;
+                margin: 0px 11px;
+                border: none;" id="loginDiv" id="butoniLogout">Logout</button></a>
         </div>
     </div>
 </header>
 
 <div class="container">
     <h2>User Dashboard</h2>
-    <a href="createUserForm.php">New User</a>
+    <div style="width: 100%;
+            display: flex;    
+            justify-content: flex-end;
+            margin-bottom: 5px;" class="mbeshtjellsi">
+    <div style="width: 95px;
+            height: 35px;
+            background-color: orange;
+            margin: 0px 11px;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;" id="createButton">
+    <a style="
+            color: white;" href="createUserForm.php">Create User</a>
+    </div>
+    </div>
     <div class="table-container">
         <table>
             <tr>
