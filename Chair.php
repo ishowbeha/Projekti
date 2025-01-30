@@ -59,8 +59,12 @@ include 'session_control.php';
         
         <div class="kutia">
             <img src="ChairsPage/4.jpg" alt="Sofa 4">
+            <h1>Emri productit</h1>
             <p class="cmimi">$399.00</p>
-            <button class="butoniBuy">Buy Now</button>
+            <form action="buyProduct.php">
+                <input type="text" name="product" value="emriProductit">
+                 <button type="submit" class="butoniBuy">Buy Now</button>
+            </form>
         </div>
      
         <div class="kutia">

@@ -34,7 +34,7 @@
     <div class="c">
     <div class="signup-container">
         <h2>Sign Up</h2>
-        <form id="form" action="registerController.php" method="POST">
+        <form id="form" action="registerUserController.php" method="POST">
             <div class="input-container">
                 <input type="text" class="inputet" placeholder="First Name" id="emri" name="name" required>
                 <input type="text" class="inputet" placeholder="Last Name"  id="mbiemri" name="surname" required>
@@ -143,12 +143,10 @@
            </select>
            </div>
            <form action="registerController.php" method="POST">
-    <button type="submit" name="registerBtn" class="butoni" id="btn">Sign Up</button>
+    <button type="submit" name="registerBtn" class="butoni" id="btn">Add user</button>
 </form>
         </form>
-        <div class="login-link">
-            <p>Already have an account? <a href="logIn1.php">Login</a></p> <!-- Linku për Login -->
-        </div>
+        
     </div>
     </div>
     <footer id="footer" class="footer">

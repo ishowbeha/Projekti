@@ -1,3 +1,8 @@
+<?php
+include 'session.php';
+checkLogin();
+include 'session_control.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -228,13 +233,14 @@
             <a href="index.php#footer">Contact Us</a>
         </nav>
         <div id="loginDiv">
-            <a href="LogIn1.php"><button id="butoniLogIn">Log In</button></a>
+            <a href="LogOut.php"><button id="butoniLogout">Logout</button></a>
         </div>
     </div>
 </header>
 
 <div class="container">
     <h2>User Dashboard</h2>
+    <a href="createUserForm.php">New User</a>
     <div class="table-container">
         <table>
             <tr>
@@ -252,8 +258,6 @@
             </tr>
 
             <?php 
-            include 'session.php';
-            checkAdmin();
             include_once 'userRepository.php';
             $userRepository = new UserRepository();
             $users = $userRepository->getAllUsers(); 

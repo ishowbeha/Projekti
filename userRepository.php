@@ -49,8 +49,8 @@ class UserRepository {
 
     function getUserByEmail($email) {
         $conn = $this->connection;
-        $sql = "SELECT email, password FROM users WHERE email = ?";
-        $statement = $conn->prepare($sql);
+        $sql = "SELECT * FROM users WHERE email = ?";
+        $statement = $conn->prepare(query: $sql);
         $statement->execute([$email]);
         return $statement->fetch(PDO::FETCH_ASSOC); // Kthen associative array
     }

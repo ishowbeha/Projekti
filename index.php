@@ -31,13 +31,19 @@ include 'session_control.php';
                 <a href="index.php#categories">Category</a>
                 <a href="index.php#slider-seksioni">Offerts</a>
                 <a href="index.php#footer">Contact Us</a>
-                <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
-                <a href="dashboard.php">Dashboard</a> 
-                <?php endif; ?>
             </nav>
             <div id="loginDiv">
+            
+            <?php if (isset($_SESSION['role']) && strtolower($_SESSION['role']) === 'admin'): ?>
+                <a href="dashboard.php">
+                    <button id="adminButton" style="background-color: #007bff; color: white; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer;">
+                            Admin Dashboard
+                        </button>
+                </a>
+                <?php endif; ?>
+                      
                 <?php if (isset($_SESSION['email'])): ?>
-                    <a href="logout.php"><button id="butoniLogout">Logout</button></a>
+                    <a href="LogOut.php"><button id="butoniLogout">Logout</button></a>
                 <?php else: ?>
                     <a href="LogIn1.php"><button id="butoniLogIn">Log In</button></a>
                 <?php endif; ?>
