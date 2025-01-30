@@ -6,6 +6,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="sign_up.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+            .navbar { display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: center;}
+            .butoni{margin-bottom: 3px;}
+    </style>
 </head>
 <body>
     
@@ -26,14 +33,12 @@
                 <a href="index.php#slider-seksioni">Offerts</a>
                 <a href="index.php#footer">Contact Us</a>
             </nav>
-            <div id="loginDiv">
-                <a href="LogIn1.php"><button id="butoniLogIn">Log In</button></a>
-            </div>
+            
         </div>
     </header>
     <div class="c">
     <div class="signup-container">
-        <h2>Sign Up</h2>
+        <h2>Create new user</h2>
         <form id="form" action="registerUserController.php" method="POST">
             <div class="input-container">
                 <input type="text" class="inputet" placeholder="First Name" id="emri" name="name" required>
@@ -144,6 +149,9 @@
            </div>
            <form action="registerController.php" method="POST">
     <button type="submit" name="registerBtn" class="butoni" id="btn">Add user</button>
+</form>
+<form action="dashboard.php" method="POST">
+    <button type="submit" name="backBtn" class="butoni" id="btn">Back</button>
 </form>
         </form>
         
