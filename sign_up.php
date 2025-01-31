@@ -137,11 +137,13 @@
             
             <input type="password" class="inputet" id="pass" placeholder="Password" name="password" required>
             <div class="inputet">
-           <select name="role" id="role">
-            <option value="user" selected="selected">User</option>
-            <option value="admin">Admin</option>
-           </select>
-           </div>
+            <select style="border: none; background: none; width: 100%; font-size: 16px; outline: none;"
+                name="role"
+                id="role">
+                <option value="User">User</option>
+                <option value="Admin">Admin</option>
+            </select>
+            </div>
            <form action="registerController.php" method="POST">
     <button type="submit" name="registerBtn" class="butoni" id="btn">Sign Up</button>
 </form>

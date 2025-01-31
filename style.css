@@ -58,7 +58,7 @@ p{
     transition: color 0.3s ease;
 }
 
-.navbar nav a:hover {
+nav a:hover {
     color: #f4c542;
 }
 #loginDiv #butoniLogIn{

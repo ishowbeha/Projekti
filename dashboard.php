@@ -18,88 +18,53 @@ include 'session_control.php';
         }
 
         body {
-            background-image: url('LogInPhoto.png'); 
-            background-size: cover; 
-            background-position: center; 
-            background-repeat: no-repeat; 
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            background: #f4f4f4;
         }
 
         .header {
             background-color: #0a2540;
             color: white;
-            padding: 1rem 0;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
+            padding: 1rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
         }
 
         .navbar {
             display: flex;
             align-items: center;
-            width: 100%;
-            justify-content: space-between;
-            padding: 0 20px;
         }
 
-        .navbar .logo img {
-            width: 120px;
-            height: auto;
+        .navbar nav {
+            display: flex;
+            gap: 15px;
         }
 
         .navbar nav a {
             color: white;
-            margin: 0 1rem;
             text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: bold;
-            transition: color 0.3s ease;
+            font-size: 16px;
+            transition: 0.3s;
         }
 
         .navbar nav a:hover {
             color: #f4c542;
         }
 
-        #loginDiv #butoniLogIn {
-            width: 95px;
-            height: 35px;
-            background-color: white;
-            border: none;
-            cursor: pointer;
-            font-weight: bold;
-            transition: transform 0.2s ease;
-        }
-
-        #butoniLogIn:hover {
-            transform: scale(1.05);
-        }
-
         .container {
-            margin-top: 120px;
             width: 90%;
             max-width: 1200px;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        h2 {
-            color: #0a2540;
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 20px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
         }
 
         .table-container {
@@ -109,138 +74,127 @@ include 'session_control.php';
         table {
             width: 100%;
             border-collapse: collapse;
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         th, td {
             padding: 12px;
             text-align: center;
-            border-bottom: 1px solid #ddd;
+            border: 1px solid #ddd;
         }
 
         th {
             background-color: #0a2540;
             color: white;
-            font-size: 14px;
-            text-transform: uppercase;
         }
-
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
-        tr:hover {
-            background-color: #ddd;
-            transition: 0.3s;
-        }
-       
 
         .edit-btn, .delete-btn {
-            padding: 8px 12px;
-            font-size: 14px;
+            padding: 8px 10px;
             border: none;
-            border-radius: 5px;
             cursor: pointer;
+            border-radius: 5px;
             transition: 0.3s;
         }
 
-        .edit-btn {
-            background-color: #4CAF50;
-            color: white;
-        }
+    .edit-btn { background-color: #4CAF50; color: white; }
+    .delete-btn { background-color: #f44336; color: white; }
 
-        .edit-btn:hover {
-            background-color: #3e8e41;
-        }
+.hamburger {
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    cursor: pointer;
+    font-size: 36px;
+    width: 30px; /* Width of the hamburger */
+    height: 56px; /* Height of the hamburger */
+}
 
-        .delete-btn {
-            background-color: #f44336;
-            color: white;
-        }
+.bar {
+    height: 4px; /* Height of each bar */
+    width: 100%; /* Full width */
+    background-color: white; /* Bar color */
+    margin: 2px 0; /* Space between bars */
+    transition: all 0.3s ease; /* Smooth transition */
+}
 
-        .delete-btn:hover {
-            background-color: #d32f2f;
-        }
+/* Navigation links styles */
+#nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
-        .footer {
-            background-color: #0a2540;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: auto;
-        }
+#nav-links a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
 
-        .footer-container {
-            max-width: 600px;
-            margin: auto;
-        }
+/* Active class for nav links */
+#nav-links.active {
+    display: block; /* Show links when active */
+}
+.navbar .hamLogoSwitch{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-left: 20px;
 
-        .footer p, .footer a {
-            color: white;
-            font-size: 14px;
-        }
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* Show hamburger on small screens */
+    }
 
-        .footer a:hover {
-            text-decoration: underline;
-        }
+    #nav-links {
+        display: none; /* Hide links by default on small screens */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Positioning */
+        top: 121px; /* Position below the header */
+        left: 0;
+        background-color: #0a2540; /* Background color for dropdown */
+        padding: 10px 0; /* Padding */
+        z-index: 1000; /* Ensure it appears above other content */
+    }
 
-        @media (max-width: 768px) {
-            .container {
-                width: 95%;
-                padding: 20px;
-            }
+    #nav-links.active {
+        display: flex; /* Show links when active */
+    }
 
-            .navbar {
-                flex-direction: column;
-                align-items: center;
-            }
+    #nav-links a {
+        padding: 10px 20px; /* Add padding to links */
+        border-bottom: 1px solid #555; /* Optional: add a border between links */
+    }
 
-            .navbar nav {
-                display: flex;
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .navbar nav a {
-                margin: 5px 0;
-            }
-
-            table {
-                font-size: 12px;
-            }
-
-            th, td {
-                padding: 8px;
-            }
-        }
+    #nav-links a:hover {
+        background-color: #555; /* Change background on hover */
+    }
+}
     </style>
 </head>
 <body>
 
 <header class="header">
-    <div class="navbar">
-        <div class="logo">
-            <a href="index.php">
-                <img src="Icons/LogoKryesorePaBackground.png" alt="Logo">
-            </a>
+<div class="navbar">
+<div class="hamLogoSwitch">
+    <div class="logo">
+        <a id="aeLogos" href="index.php">
+            <img id="logo1" src="Icons/LogoKryesorePaBackground.png" alt="Logo" /></a>
         </div>
-        <nav>
-            <a href="index.php">Home</a>
-            <a href="index.php#categories">Category</a>
-            <a href="index.php#slider-seksioni">Offers</a>
-            <a href="index.php#footer">Contact Us</a>
-        </nav>
-        <div id="loginDiv">
-            <a href="LogOut.php"><button style="    width: 95px;
-                height: 35px;
-                background-color: white;
-                margin: 0px 11px;
-                border: none;" id="loginDiv" id="butoniLogout">Logout</button></a>
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776; <!-- Kjo është ikona e hamburgerit -->
         </div>
-    </div>
+</div>
+    
+    <nav id="nav-links">
+        <a href="index.php">Home</a>
+        <a href="index.php#categories">Category</a>
+        <a href="index.php#slider-seksioni">Offers</a>
+        <a href="index.php#footer">Contact Us</a>
+    </nav>
+</div>
 </header>
 
 <div class="container">
@@ -322,6 +276,12 @@ include 'session_control.php';
         <p>&copy; 2024 Furniture Luxenook. All rights reserved.</p>
     </div>
 </footer>
+<script>
+     function toggleMenu() {
+        const navLinks = document.getElementById('nav-links');
+        navLinks.classList.toggle('active');
+    }
+</script>
 
 </body>
 </html>
