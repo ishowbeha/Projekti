@@ -85,7 +85,7 @@ include 'session_control.php';
     <!-- Contact Form -->
     <div class="contact-form">
         <h2>Contact Us</h2>
-        <form onsubmit="return validateForm()" method="post">
+        <form   action="process_contact.php" method="POST" onsubmit="return validateForm()">
             <label for="name">Name:</label><br>
             <input type="text" id="name" name="name" placeholder="Enter your name"><br>
             
@@ -123,8 +123,7 @@ include 'session_control.php';
     document.addEventListener("DOMContentLoaded", function(ngjarja) {
     const SubmitButon = document.getElementById('btn');
     
-    const validate = (ngjarja) => {
-        ngjarja.preventDefault();
+
             var name = document.getElementById("name").value;
             var email = document.getElementById("email").value;
             var message = document.getElementById("message").value;
@@ -154,5 +153,8 @@ include 'session_control.php';
 
     });
     </script>
+    <?php
+require_once "process_contact.php";
+?>
 </body>
 </html>

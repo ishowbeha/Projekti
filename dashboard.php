@@ -270,7 +270,34 @@ include 'session_control.php';
         </table>
     </div>
 </div>
-
+<div class="container">
+    <h2>Contact Messages</h2>
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>EMAIL</th>
+                <th>MESSAGE</th>
+                <th>DATE</th>
+            </tr>
+            <?php 
+            include_once 'Contact.php';
+            $contact = new Contact();
+            $messages = $contact->getAllMessages(); 
+            foreach($messages as $message){
+                echo "<tr>
+                    <td>{$message['id']}</td>
+                    <td>{$message['name']}</td>
+                    <td>{$message['email']}</td>
+                    <td>{$message['message']}</td>
+                    <td>{$message['created_at']}</td>
+                </tr>";
+            }
+            ?>
+        </table>
+    </div>
+</div>
 <footer class="footer">
     <div class="footer-container">
         <p>&copy; 2024 Furniture Luxenook. All rights reserved.</p>
