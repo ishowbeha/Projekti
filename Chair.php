@@ -57,125 +57,138 @@ include 'session_control.php';
     <h1>Chairs</h1>
     <div class="KutiaKryesore">
       
-        <div class="kutia">
-            <img src="ChairsPage/1.jpg" alt="Sofa 1">
-            <p class="cmimi">$199.00</p>
-            <button class="butoniBuy">Buy Now</button>
-        </div>
-        
-        <div class="kutia">
-            <img src="ChairsPage/2.jpg" alt="Sofa 2">
-            <p class="cmimi">$249.00</p>
-            <button class="butoniBuy">Buy Now</button>
-        </div>
-      
-        <div class="kutia">
-            <img src="ChairsPage/3.jpg" alt="Sofa 3">
-            <p class="cmimi">$299.00</p>
-            <button class="butoniBuy">Buy Now</button>
-        </div>
-        
-        <div class="kutia">
-            <img src="ChairsPage/4.jpg" alt="Sofa 4">
-            <h1>Emri productit</h1>
-            <p class="cmimi">$399.00</p>
-            <form action="buyProduct.php">
-                <input type="text" name="product" value="emriProductit">
-                 <button type="submit" class="butoniBuy">Buy Now</button>
-            </form>
-        </div>
-     
-        <div class="kutia">
-            <img src="ChairsPage/5.jpg" alt="Sofa 5">
-            <p class="cmimi">$199.00</p>
-            <button class="butoniBuy">Buy Now</button>
-        </div>
- 
-        <div class="kutia">
-            <img src="ChairsPage/6.jpg " alt="Sofa 6">
-            <p class="cmimi">$249.00</p>
-            <button class="butoniBuy">Buy Now</button>
-        </div>
-       
-        <div class="kutia">
-            <img src="ChairsPage/7.jpg" alt="Sofa 7">
-            <p class="cmimi">$299.00</p>
-            <button class="butoniBuy">Buy Now</button>
-        </div>
-       
-        <div class="kutia">
-            <img src="ChairsPage/8.jpg" alt="Sofa 8">
-            <p class="cmimi">$399.00</p>
-            <button class="butoniBuy">Buy Now</button>
-        </div>
-     
-        <div class="kutia">
-            <img src="ChairsPage/9.jpg" alt="Sofa 9">
-            <p class="cmimi">$199.00</p>
-            <button class="butoniBuy">Buy Now</button>
-        </div>
-     
-        <div class="kutia">
-            <img src="ChairsPage/10.jpg" alt="Sofa 10">
-            <p class="cmimi">$249.00</p>
-            <button class="butoniBuy">Buy Now</button>
-        </div>
-      
-        <div class="kutia">
-            <img src="ChairsPage/11.jpg" alt="Sofa 11">
-            <p class="cmimi">$299.00</p>
-            <button class="butoniBuy">Buy Now</button>
-        </div>
-       
-        <div class="kutia">
-            <img src="ChairsPage/12.jpg" alt="Sofa 12">
-            <p class="cmimi">$399.00</p>
-            <button class="butoniBuy">Buy Now</button>
-        </div>
-     
-        <div class="kutia">
-            <img src="ChairsPage/13.jpg" alt="Sofa 13">
-            <p class="cmimi">$199.00</p>
-            <button class="butoniBuy">Buy Now</button>
-        </div>
-       
-        <div class="kutia">
-            <img src="ChairsPage/14.jpg" alt="Sofa 14">
-            <p class="cmimi">$249.00</p>
-            <button class="butoniBuy">Buy Now</button>
-        </div>
-      
-        <div class="kutia">
-            <img src="ChairsPage/15.jpg" alt="Sofa 15">
-            <p class="cmimi">$299.00</p>
-            <button class="butoniBuy">Buy Now</button>
-        </div>
-      
-        <div class="kutia">
-            <img src="ChairsPage/16.jpg" alt="Sofa 16">
-            <p class="cmimi">$399.00</p>
-            <button class="butoniBuy">Buy Now</button>
-        </div>
-    </div>
-
-    <footer id="footer" class="footer">
-        <div class="footer-container">
-          <h4>Contact Us</h4>
-          <p><strong>Phone:</strong></p>
-          <p>+38349878666 | +38344878666</p>
-          <p><strong>Email:</strong></p>
-          <p><a href="mailto:luxenook@outlook.com">luxenook@outlook.com</a></p>
-          <p><strong>Address:</strong></p>
-          <p>Lagjja Kalabria,10000 Prishtine, Kosovo</p>
-          <p>Abi Carshia, Prizren</p>
-        </div>
-        <div class="footer-bottom">
-          <p id="p" style="margin-bottom: 30px;">&copy; 2024 Furniture Luxenook. All rights reserved.</p>
-        </div>
-    
-        <div id="contactForm" class="contact-form-link">
-            <p ><a id="a" href="ContactForm.html">Click here to contact us</a></p>
-        </div>
+      <div class="kutia">
+          <img src="ChairsPage/1.jpg" alt="Aurora Comfort">
+          <h1>Aurora Comfort</h1>
+          <p class="cmimi">$199.00</p>
+          <form action="buyProduct.php" method="POST">
+              <input type="hidden" name="product_name" value="Aurora Comfort">
+              <input type="hidden" name="price" value="199.00">
+              <button type="submit" class="butoniBuy">Order Now</button>
+          </form>
+      </div>
+  
+      <div class="kutia">
+          <img src="ChairsPage/2.jpg" alt="Elite Luxe">
+          <h1>Elite Luxe</h1>
+          <p class="cmimi">$249.00</p>
+          <form action="buyProduct.php" method="POST">
+              <input type="hidden" name="product_name" value="Elite Luxe">
+              <input type="hidden" name="price" value="249.00">
+              <button type="submit" class="butoniBuy">Order Now</button>
+          </form>
+      </div>
+  
+      <div class="kutia">
+          <img src="ChairsPage/3.jpg" alt="Zenith Recliner">
+          <h1>Zenith Recliner</h1>
+          <p class="cmimi">$299.00</p>
+          <form action="buyProduct.php" method="POST">
+              <input type="hidden" name="product_name" value="Zenith Recliner">
+              <input type="hidden" name="price" value="299.00">
+              <button type="submit" class="butoniBuy">Order Now</button>
+          </form>
+      </div>
+  
+      <div class="kutia">
+          <img src="ChairsPage/4.jpg" alt="Grand Majesty">
+          <h1>Grand Majesty</h1>
+          <p class="cmimi">$399.00</p>
+          <form action="buyProduct.php" method="POST">
+              <input type="hidden" name="product_name" value="Grand Majesty">
+              <input type="hidden" name="price" value="399.00">
+              <button type="submit" class="butoniBuy">Order Now</button>
+          </form>
+      </div>
+  
+      <div class="kutia">
+          <img src="ChairsPage/5.jpg" alt="Serenity Seat">
+          <h1>Serenity Seat</h1>
+          <p class="cmimi">$199.00</p>
+          <form action="buyProduct.php" method="POST">
+              <input type="hidden" name="product_name" value="Serenity Seat">
+              <input type="hidden" name="price" value="199.00">
+              <button type="submit" class="butoniBuy">Order Now</button>
+          </form>
+      </div>
+  
+      <div class="kutia">
+          <img src="ChairsPage/6.jpg" alt="CloudNest">
+          <h1>CloudNest</h1>
+          <p class="cmimi">$249.00</p>
+          <form action="buyProduct.php" method="POST">
+              <input type="hidden" name="product_name" value="CloudNest">
+              <input type="hidden" name="price" value="249.00">
+              <button type="submit" class="butoniBuy">Order Now</button>
+          </form>
+      </div>
+  
+      <div class="kutia">
+          <img src="ChairsPage/7.jpg" alt="Regal Haven">
+          <h1>Regal Haven</h1>
+          <p class="cmimi">$299.00</p>
+          <form action="buyProduct.php" method="POST">
+              <input type="hidden" name="product_name" value="Regal Haven">
+              <input type="hidden" name="price" value="299.00">
+              <button type="submit" class="butoniBuy">Order Now</button>
+          </form>
+      </div>
+  
+      <div class="kutia">
+          <img src="ChairsPage/8.jpg" alt="Prestige Plush">
+          <h1>Prestige Plush</h1>
+          <p class="cmimi">$399.00</p>
+          <form action="buyProduct.php" method="POST">
+              <input type="hidden" name="product_name" value="Prestige Plush">
+              <input type="hidden" name="price" value="399.00">
+              <button type="submit" class="butoniBuy">Order Now</button>
+          </form>
+      </div>
+  
+      <div class="kutia">
+          <img src="ChairsPage/9.jpg" alt="Velvet Bliss">
+          <h1>Velvet Bliss</h1>
+          <p class="cmimi">$199.00</p>
+          <form action="buyProduct.php" method="POST">
+              <input type="hidden" name="product_name" value="Velvet Bliss">
+              <input type="hidden" name="price" value="199.00">
+              <button type="submit" class="butoniBuy">Order Now</button>
+          </form>
+      </div>
+  
+      <div class="kutia">
+          <img src="ChairsPage/10.jpg" alt="Modern Edge">
+          <h1>Modern Edge</h1>
+          <p class="cmimi">$249.00</p>
+          <form action="buyProduct.php" method="POST">
+              <input type="hidden" name="product_name" value="Modern Edge">
+              <input type="hidden" name="price" value="249.00">
+              <button type="submit" class="butoniBuy">Order Now</button>
+          </form>
+      </div>
+  
+      <div class="kutia">
+          <img src="ChairsPage/11.jpg" alt="Harmony Lounger">
+          <h1>Harmony Lounger</h1>
+          <p class="cmimi">$299.00</p>
+          <form action="buyProduct.php" method="POST">
+              <input type="hidden" name="product_name" value="Harmony Lounger">
+              <input type="hidden" name="price" value="299.00">
+              <button type="submit" class="butoniOrder">Order Now</button>
+          </form>
+      </div>
+  
+      <div class="kutia">
+          <img src="ChairsPage/12.jpg" alt="Opulence Chair">
+          <h1>Opulence Chair</h1>
+          <p class="cmimi">$399.00</p>
+          <form action="buyProduct.php" method="POST">
+              <input type="hidden" name="product_name" value="Opulence Chair">
+              <input type="hidden" name="price" value="399.00">
+              <button type="submit" class="butoniBuy">Order Now</button>
+          </form>
+      </div>
+  </div>
       </footer>
 </body>
 </html>
