@@ -36,11 +36,11 @@
         <h2>Sign Up</h2>
         <form id="form" action="registerController.php" method="POST">
             <div class="input-container">
-                <input type="text" class="inputet" placeholder="First Name" id="emri" name="name" required>
-                <input type="text" class="inputet" placeholder="Last Name"  id="mbiemri" name="surname" required>
+                <input type="text" class="inputet" placeholder="First Name" id="emri" name="name" required title="Ju lutem shtoni emrin tuaj">
+                <input type="text" class="inputet" placeholder="Last Name"  id="mbiemri" name="surname" required title="Ju lutem shtoni mbiemrin tuaj">
             </div>
             
-            <input type="email" class="inputet" placeholder="Email"         id="email"name="email" required>
+            <input type="email" class="inputet" placeholder="Email"         id="email"name="email" required title="Ju lutem shtoni një email të vlefshëm">
             <div class="mainGender">
                     <div class="genders">
                         <input id="female" type="radio" name="gender" value="Female">
@@ -135,7 +135,7 @@
                 </select>
             </div>
             
-            <input type="password" class="inputet" id="pass" placeholder="Password" name="password" required>
+            <input type="password" class="inputet" id="pass" placeholder="Password" name="password" required title="Fjalëkalimi është i detyrueshëm" minlength="8" title="Fjalëkalimi duhet të ketë të paktën 8 karaktere">
             <div class="inputet">
             <select style="border: none; background: none; width: 100%; font-size: 16px; outline: none;"
                 name="role"
@@ -144,10 +144,10 @@
                 <option value="Admin">Admin</option>
             </select>
             </div>
-           <form action="registerController.php" method="POST">
+           
     <button type="submit" name="registerBtn" class="butoni" id="btn">Sign Up</button>
 </form>
-        </form>
+        
         <div class="login-link">
             <p>Already have an account? <a href="logIn1.php">Login</a></p> <!-- Linku për Login -->
         </div>

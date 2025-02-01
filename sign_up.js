@@ -1,53 +1,57 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById('form');
     const submitButton = document.getElementById('btn');
-    const form = document.getElementById('form'); // Sigurohuni që forma ka një ID
+    const password = document.getElementById('pass'); 
 
-    const validate = (ngjarja) => {
+    const validate = (event) => {
         const emri = document.getElementById('emri');
         const mbiemri = document.getElementById('mbiemri');
-        const password = document.getElementById('pass');
         const email = document.getElementById('email');
+        const gender = document.querySelector('input[name="gender"]:checked');
+        const day = document.querySelector('select[name="day"]');
+        const month = document.querySelector('select[name="month"]');
+        const year = document.querySelector('select[name="year"]');
 
-        // Validimet
         if (emri.value.trim() === "") {
-            alert("Ju lutem shtoni EMRIN tuaj");
             emri.focus();
-            ngjarja.preventDefault(); // Parandalon dërgimin në rast gabimi
+            event.preventDefault(); 
             return false;
         }
-
         if (mbiemri.value.trim() === "") {
-            alert("Ju lutem shtoni MBIEMRIN tuaj");
             mbiemri.focus();
-            ngjarja.preventDefault();
+            event.preventDefault();
             return false;
         }
-
         if (password.value.trim() === "") {
-            alert("Ju lutem shtoni PASSWORDIN tuaj");
             password.focus();
-            ngjarja.preventDefault();
+            event.preventDefault();
             return false;
         }
-
+        if (password.value.length < 8) {
+            password.focus();
+            event.preventDefault(); 
+            return false;
+        }
         if (email.value.trim() === "") {
-            alert("Ju lutem shtoni EMAIL tuaj");
             email.focus();
-            ngjarja.preventDefault();
+            event.preventDefault();
             return false;
         }
 
         if (!emailValid(email.value)) {
-            alert("Ju lutem shtoni një Email valid");
             email.focus();
-            ngjarja.preventDefault();
+            event.preventDefault();
             return false;
         }
-        
-
-        // Nëse të gjitha janë të sakta, forma lejohet të dërgohet
-        
-        return true; // Forma do të dërgohet në PHP
+        if (!gender) {
+            event.preventDefault();
+            return false;
+        }
+        if (!day.value || !month.value || !year.value) {
+            event.preventDefault();
+            return false;
+        }
+        return true;
     };
 
     const emailValid = (email) => {
@@ -56,9 +60,9 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     if (form) {
-        form.addEventListener('submit', (ngjarja) => {
-            if (!validate(ngjarja)) {
-                ngjarja.preventDefault(); // Parandalon dërgimin nëse ka gabime
+        form.addEventListener('submit', (event) => {
+            if (!validate(event)) {
+                event.preventDefault(); 
             }
         });
     } else {

@@ -25,9 +25,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         header("Location: index.php");
         exit();
     }
-    } else {
+     else {
         $error_message = "Email ose fjalëkalimi është gabim!";
     }
+}
 
 
 ob_end_flush();

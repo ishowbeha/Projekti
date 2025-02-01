@@ -16,7 +16,10 @@ include 'session_control.php';
             padding: 0;
             box-sizing: border-box;
         }
-
+        h2{
+            display: flex;
+            justify-content: center;
+        }
         body {
             font-family: Arial, sans-serif;
             display: flex;
@@ -194,15 +197,23 @@ include 'session_control.php';
         <a href="index.php#slider-seksioni">Offers</a>
         <a href="index.php#footer">Contact Us</a>
     </nav>
+    <a style="display: inline-block;" href="LogOut.php"><button style="    width: 95px;
+                height: 35px;
+                background-color: white;
+                margin:0px 11px;
+                border: none;
+                cursor: pointer;
+                pointer-events: auto;" id="butoniLogout">Log Out</button></a>
 </div>
 </header>
 
 <div class="container">
-    <h2>User Dashboard</h2>
+    
     <div style="width: 100%;
             display: flex;    
             justify-content: flex-end;
             margin-bottom: 5px;" class="mbeshtjellsi">
+            <h2 style="margin: auto;">User Dashboard</h2>
     <div style="width: 115px;
     height: 35px;
     background-color: orange;
