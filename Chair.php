@@ -61,7 +61,7 @@ include 'session_control.php';
           <img src="ChairsPage/1.jpg" alt="Aurora Comfort">
           <h1>Aurora Comfort</h1>
           <p class="cmimi">$199.00</p>
-          <form action="buyProduct.php" method="POST">
+          <form action="OrderController.php" method="POST">
               <input type="hidden" name="product_name" value="Aurora Comfort">
               <input type="hidden" name="price" value="199.00">
               <button type="submit" class="butoniBuy">Order Now</button>
@@ -72,7 +72,7 @@ include 'session_control.php';
           <img src="ChairsPage/2.jpg" alt="Elite Luxe">
           <h1>Elite Luxe</h1>
           <p class="cmimi">$249.00</p>
-          <form action="buyProduct.php" method="POST">
+          <form action="OrderController.php" method="POST">
               <input type="hidden" name="product_name" value="Elite Luxe">
               <input type="hidden" name="price" value="249.00">
               <button type="submit" class="butoniBuy">Order Now</button>
@@ -83,7 +83,7 @@ include 'session_control.php';
           <img src="ChairsPage/3.jpg" alt="Zenith Recliner">
           <h1>Zenith Recliner</h1>
           <p class="cmimi">$299.00</p>
-          <form action="buyProduct.php" method="POST">
+          <form action="OrderController.php" method="POST">
               <input type="hidden" name="product_name" value="Zenith Recliner">
               <input type="hidden" name="price" value="299.00">
               <button type="submit" class="butoniBuy">Order Now</button>
@@ -94,7 +94,7 @@ include 'session_control.php';
           <img src="ChairsPage/4.jpg" alt="Grand Majesty">
           <h1>Grand Majesty</h1>
           <p class="cmimi">$399.00</p>
-          <form action="buyProduct.php" method="POST">
+          <form action="OrderController.php" method="POST">
               <input type="hidden" name="product_name" value="Grand Majesty">
               <input type="hidden" name="price" value="399.00">
               <button type="submit" class="butoniBuy">Order Now</button>
@@ -105,7 +105,7 @@ include 'session_control.php';
           <img src="ChairsPage/5.jpg" alt="Serenity Seat">
           <h1>Serenity Seat</h1>
           <p class="cmimi">$199.00</p>
-          <form action="buyProduct.php" method="POST">
+          <form action="OrderController.php" method="POST">
               <input type="hidden" name="product_name" value="Serenity Seat">
               <input type="hidden" name="price" value="199.00">
               <button type="submit" class="butoniBuy">Order Now</button>
@@ -116,7 +116,7 @@ include 'session_control.php';
           <img src="ChairsPage/6.jpg" alt="CloudNest">
           <h1>CloudNest</h1>
           <p class="cmimi">$249.00</p>
-          <form action="buyProduct.php" method="POST">
+          <form action="OrderController.php" method="POST">
               <input type="hidden" name="product_name" value="CloudNest">
               <input type="hidden" name="price" value="249.00">
               <button type="submit" class="butoniBuy">Order Now</button>
@@ -127,7 +127,7 @@ include 'session_control.php';
           <img src="ChairsPage/7.jpg" alt="Regal Haven">
           <h1>Regal Haven</h1>
           <p class="cmimi">$299.00</p>
-          <form action="buyProduct.php" method="POST">
+          <form action="OrderController.php" method="POST">
               <input type="hidden" name="product_name" value="Regal Haven">
               <input type="hidden" name="price" value="299.00">
               <button type="submit" class="butoniBuy">Order Now</button>
@@ -138,7 +138,7 @@ include 'session_control.php';
           <img src="ChairsPage/8.jpg" alt="Prestige Plush">
           <h1>Prestige Plush</h1>
           <p class="cmimi">$399.00</p>
-          <form action="buyProduct.php" method="POST">
+          <form action="OrderController.php" method="POST">
               <input type="hidden" name="product_name" value="Prestige Plush">
               <input type="hidden" name="price" value="399.00">
               <button type="submit" class="butoniBuy">Order Now</button>
@@ -149,7 +149,7 @@ include 'session_control.php';
           <img src="ChairsPage/9.jpg" alt="Velvet Bliss">
           <h1>Velvet Bliss</h1>
           <p class="cmimi">$199.00</p>
-          <form action="buyProduct.php" method="POST">
+          <form action="OrderController.php" method="POST">
               <input type="hidden" name="product_name" value="Velvet Bliss">
               <input type="hidden" name="price" value="199.00">
               <button type="submit" class="butoniBuy">Order Now</button>
@@ -160,7 +160,7 @@ include 'session_control.php';
           <img src="ChairsPage/10.jpg" alt="Modern Edge">
           <h1>Modern Edge</h1>
           <p class="cmimi">$249.00</p>
-          <form action="buyProduct.php" method="POST">
+          <form action="OrderController.php" method="POST">
               <input type="hidden" name="product_name" value="Modern Edge">
               <input type="hidden" name="price" value="249.00">
               <button type="submit" class="butoniBuy">Order Now</button>
@@ -171,10 +171,10 @@ include 'session_control.php';
           <img src="ChairsPage/11.jpg" alt="Harmony Lounger">
           <h1>Harmony Lounger</h1>
           <p class="cmimi">$299.00</p>
-          <form action="buyProduct.php" method="POST">
+          <form action="OrderController.php" method="POST">
               <input type="hidden" name="product_name" value="Harmony Lounger">
               <input type="hidden" name="price" value="299.00">
-              <button type="submit" class="butoniOrder">Order Now</button>
+              <button type="submit" class="butoniBuy">Order Now</button>
           </form>
       </div>
   
@@ -182,7 +182,7 @@ include 'session_control.php';
           <img src="ChairsPage/12.jpg" alt="Opulence Chair">
           <h1>Opulence Chair</h1>
           <p class="cmimi">$399.00</p>
-          <form action="buyProduct.php" method="POST">
+          <form action="OrderController.php" method="POST">
               <input type="hidden" name="product_name" value="Opulence Chair">
               <input type="hidden" name="price" value="399.00">
               <button type="submit" class="butoniBuy">Order Now</button>
@@ -190,5 +190,9 @@ include 'session_control.php';
       </div>
   </div>
       </footer>
+      
+      <?php
+include('OrderController.php');  // Lidhje me buyProduct.php për të ekzekutuar funksionet e tij
+?>
 </body>
 </html>

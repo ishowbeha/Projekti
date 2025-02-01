@@ -19,14 +19,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $user = $userRepo->getUserByEmail($email);
 
     if ($user && password_verify($password, $user['password'])) {
+        $_SESSION['user_id'] = $user['id']; // Ruaj ID e përdoruesit në sesion
         $_SESSION['email'] = $user['email'];
         $_SESSION['role'] = $user['role']; // Ruajmë rolin për kontroll
         header("Location: index.php");
         exit();
+    }
     } else {
         $error_message = "Email ose fjalëkalimi është gabim!";
     }
-}
+
 
 ob_end_flush();
 ?>

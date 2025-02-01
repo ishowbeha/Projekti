@@ -298,6 +298,66 @@ include 'session_control.php';
         </table>
     </div>
 </div>
+
+
+<div class="container" id="order-list">
+    <h2>Orders</h2>
+    <div class="table-container" >
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>USER ID</th>
+                <th>NAME</th>
+                <th>SURNAME</th>
+                <th>PRODUCT NAME</th>
+                <th>PRICE</th>
+                <th>DATE</th>
+                <th>Delete</th>
+            </tr>
+            <?php 
+            include_once 'OrderRepository.php';
+            include_once 'session.php'; // Sigurohuni që session.php është përfshirë vetëm një herë
+
+            // Kontrolloni nëse sesioni është nisur dhe përdoruesi është i kyçur
+            if (!isset($_SESSION['user_id'])) {
+                echo "<tr><td colspan='7'>Ju lutemi kyçuni për të parë porositë.</td></tr>";
+            } else {
+                $userId = $_SESSION['user_id']; // Përdorni user_id nga sesioni
+                
+                // Krijoni instancën e OrderRepository dhe merrni porositë
+                $orderRepository = new OrderRepository();
+                $orders = $orderRepository->getOrdersByUserId($userId); 
+
+                // Kontrolloni nëse ka porosi
+                if (empty($orders)) {
+                    echo "<tr><td colspan='7'>Nuk ka porosi për këtë përdorues.</td></tr>";
+                } else {
+                    // Shfaqni porositë
+                    foreach($orders as $order) {
+                        echo "<tr>
+                            <td>{$order['id']}</td>
+                            <td>{$order['user_id']}</td>
+                            <td>{$order['name']}</td>
+                            <td>{$order['surname']}</td>
+                            <td>{$order['product_name']}</td>
+                            <td>{$order['price']}</td>
+                            <td>{$order['created_at']}</td>
+                            <td><a href='deleteProduct.php?id={$order['id']}' class='delete-btn'>Delete</a></td>
+
+                        </tr>";
+                    }
+                }
+            }
+            ?>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
 <footer class="footer">
     <div class="footer-container">
         <p>&copy; 2024 Furniture Luxenook. All rights reserved.</p>

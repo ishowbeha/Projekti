@@ -151,7 +151,7 @@ include 'session_control.php';
     }
         SubmitButon.addEventListener('click', validate);
 
-    });
+    );
     </script>
     <?php
 require_once "process_contact.php";
