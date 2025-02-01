@@ -8,7 +8,9 @@ class OrderController {
     public function __construct() {
         $this->orderRepository = new OrderRepository();
     }
-
+    public function getAllOrders() {
+        return $this->orderRepository->getAllOrders();
+    }
     public function handleOrderRequest() {
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
             if (!isset($_SESSION['user_id'])) {

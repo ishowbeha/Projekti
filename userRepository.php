@@ -68,15 +68,19 @@ class UserRepository {
     }
 
     
-    
-    function updateUser($id, $name, $surname, $email, $password) {
+    function updateUser($id, $name, $surname, $email, $password, $role) {
         $conn = $this->connection;
     
-       
-        $sql = "UPDATE users SET name=?, surname=?, email=?, password=? WHERE id=?";
-    
-        $statement = $conn->prepare($sql);
-        $statement->execute([$name, $surname, $email, $password, $id]);
+        // Nëse passwordi është bosh, ruaj passwordin ekzistues
+        if (empty($password)) {
+            $sql = "UPDATE users SET name=?, surname=?, email=?, role=? WHERE id=?";
+            $statement = $conn->prepare($sql);
+            $statement->execute([$name, $surname, $email, $role, $id]);
+        } else {
+            $sql = "UPDATE users SET name=?, surname=?, email=?, password=?, role=? WHERE id=?";
+            $statement = $conn->prepare($sql);
+            $statement->execute([$name, $surname, $email, $password, $role, $id]);
+        }
     
         echo "<script>alert('Update was successful');</script>";
     }

@@ -47,6 +47,16 @@ class OrderRepository {
             return [];
         }
     }
+    public function getAllOrders() {
+        try {
+            $stmt = $this->conn->prepare("SELECT * FROM orders");
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            error_log("Gabim gjatë marrjes së të gjitha porosive: " . $e->getMessage());
+            return [];
+        }
+    }
     public function deleteOrder($orderId) {
         try {
             // Përgatitja e deklaratës për fshirjen e porosisë

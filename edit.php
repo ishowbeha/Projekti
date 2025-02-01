@@ -13,6 +13,8 @@ if(isset($_POST['editBtn'])){
     $surname = $_POST['surname'];
     $email = $_POST['email'];
     $password = $_POST['password'];
+    $role=$_POST['role'];
+
 
     // Nëse përdoruesi nuk ka futur fjalëkalim të ri, përdor fjalëkalimin ekzistues
     if (!empty($password)) {
@@ -21,7 +23,7 @@ if(isset($_POST['editBtn'])){
         $hashedPassword = $user['password']; // Mbetet i njëjti në databazë
     }
 
-    $userRepository->updateUser($id, $name, $surname, $email, $hashedPassword);
+    $userRepository->updateUser($id, $name, $surname, $email, $hashedPassword, $role);
 
     header("location:dashboard.php");
 }
@@ -234,6 +236,13 @@ if(isset($_POST['editBtn'])){
         <label for="password">Password (leave blank to keep current):</label>
         <input class="inputet" type="password" name="password" id="password" placeholder="Enter new password"><br> <br>
 
+        <div class="inputet">
+            <select style="border: none; background: none; width: 100%; font-size: 16px; outline: none;"
+    name="role" id="role">
+    <option value="User" <?= $user['role'] == 'User' ? 'selected' : '' ?>>User</option>
+    <option value="Admin" <?= $user['role'] == 'Admin' ? 'selected' : '' ?>>Admin</option>
+</select>
+            </div>
 
         <button type="submit" name="editBtn" class="butoni">Save Changes</button> <br> <br>
     </form>

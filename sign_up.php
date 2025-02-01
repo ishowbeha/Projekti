@@ -136,14 +136,7 @@
             </div>
             
             <input type="password" class="inputet" id="pass" placeholder="Password" name="password" required title="Fjalëkalimi është i detyrueshëm" minlength="8" title="Fjalëkalimi duhet të ketë të paktën 8 karaktere">
-            <div class="inputet">
-            <select style="border: none; background: none; width: 100%; font-size: 16px; outline: none;"
-                name="role"
-                id="role">
-                <option value="User">User</option>
-                <option value="Admin">Admin</option>
-            </select>
-            </div>
+           
            
     <button type="submit" name="registerBtn" class="butoni" id="btn">Sign Up</button>
 </form>
