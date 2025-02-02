@@ -1,4 +1,9 @@
 <?php
+include 'session.php';
+checkLogin();
+include 'session_control.php';
+?>
+<?php
 $userId = $_GET['id'];
 
 include_once 'userRepository.php';
@@ -37,6 +42,7 @@ if(isset($_POST['editBtn'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit User</title>
     <link rel="stylesheet" href="style.css">
+
     <style>
         * {
             margin: 0;
@@ -219,6 +225,12 @@ if(isset($_POST['editBtn'])){
     margin-left: 20px;
 
 }
+   .navbar { display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: center;}
+            .butoni{margin-bottom: 3px;}
+  
 /* Responsive styles */
 @media (max-width: 768px) {
     .hamburger {
@@ -292,21 +304,7 @@ if(isset($_POST['editBtn'])){
             <a href="index.php#slider-seksioni">Offerts</a>
             <a href="index.php#footer">Contact Us</a>
         </nav>
-        <div style="pointer-events: none;" id="loginDiv">
-                      
-                <?php if (isset($_SESSION['email'])): ?>
-                <a style="display: inline-block;" href="LogOut.php"><button style="    width: 95px;
-                height: 35px;
-                background-color: white;
-                margin:0px 11px;
-                border: none;
-                cursor: pointer;
-                pointer-events: auto;" id="butoniLogout">Log Out</button></a>
-                <?php else: ?>
-                    <a href="LogIn1.php" ><button id="butoniLogIn">Log In</button>
-                    </a>
-                <?php endif; ?>
-            </div>
+       
     </div>
 </header>
 

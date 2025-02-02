@@ -1,4 +1,9 @@
 <?php
+include 'session.php';
+checkLogin();
+include 'session_control.php';
+?>
+<?php
 
 require_once 'OrderController.php';
 
