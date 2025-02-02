@@ -136,7 +136,7 @@
             </div>
             
             <input type="password" class="inputet" id="pass" placeholder="Password" name="password" required title="Fjalëkalimi është i detyrueshëm" minlength="8" title="Fjalëkalimi duhet të ketë të paktën 8 karaktere">
-           
+            <input type="hidden" name="role" value="user">
            
     <button type="submit" name="registerBtn" class="butoni" id="btn">Sign Up</button>
 </form>

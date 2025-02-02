@@ -17,7 +17,7 @@ if (isset($_POST['registerBtn'])) {
         $month = $_POST['month'];
         $year = $_POST['year'];
         $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
-        $role = $_POST['role'];
+        $role = isset($_POST['role']) ? $_POST['role'] : 'user';
 
         $id = $email . rand(100, 999);
 
