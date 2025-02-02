@@ -2,6 +2,7 @@
 require_once 'databaseConnection.php';
 require_once 'Order.php';
 
+
 class OrderRepository {
     private $conn;
 
@@ -73,6 +74,44 @@ class OrderRepository {
             return false;
         }
     }
+    public function getOrderById($orderId) {
+        try {
+            $stmt = $this->conn->prepare("SELECT * FROM orders WHERE id = :id");
+            $stmt->bindParam(":id", $orderId, PDO::PARAM_INT);
+            $stmt->execute();
+            return $stmt->fetch(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            error_log("Gabim gjatë marrjes së porosisë: " . $e->getMessage());
+            return null;
+        }
+    }
+    
+    public function updateOrderUserInfo($orderId, $name, $surname) {
+        try {
+            $stmt = $this->conn->prepare("UPDATE orders SET name = :name, surname = :surname WHERE id = :id");
+            $stmt->bindParam(":id", $orderId, PDO::PARAM_INT);
+            $stmt->bindParam(":name", $name, PDO::PARAM_STR);
+            $stmt->bindParam(":surname", $surname, PDO::PARAM_STR);
+            return $stmt->execute();
+        } catch (PDOException $e) {
+            error_log("Gabim gjatë përditësimit të porosisë: " . $e->getMessage());
+            return false;
+        }
+    }
+    public function updateOrderProductInfo($orderId, $productName, $price) {
+        try {
+            $stmt = $this->conn->prepare("UPDATE orders SET product_name = :product_name, price = :price WHERE id = :id");
+            $stmt->bindParam(":id", $orderId, PDO::PARAM_INT);
+            $stmt->bindParam(":product_name", $productName, PDO::PARAM_STR);
+            $stmt->bindParam(":price", $price, PDO::PARAM_STR);
+            return $stmt->execute();
+        } catch (PDOException $e) {
+            error_log("Gabim gjatë përditësimit të produktit: " . $e->getMessage());
+            return false;
+        }
+    }
+    
+    
 }
 ?>
 

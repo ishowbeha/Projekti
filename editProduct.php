@@ -1,33 +1,36 @@
 <?php
-$userId = $_GET['id'];
 
-include_once 'userRepository.php';
+require_once 'OrderController.php';
 
-$userRepository = new UserRepository();
+$orderController = new OrderController();
 
-$user  = $userRepository->getUserById($userId);
+if (!isset($_GET['id'])) {
+    die("Invalid request.");
+}
 
-if(isset($_POST['editBtn'])){
-    $id = $user['id']; 
-    $name = $_POST['name'];
-    $surname = $_POST['surname'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $role=$_POST['role'];
+$orderId = $_GET['id'];
+$order = $orderController->getOrderById($orderId);
 
+if (!$order) {
+    die("Order not found.");
+}
 
-    // Nëse përdoruesi nuk ka futur fjalëkalim të ri, përdor fjalëkalimin ekzistues
-    if (!empty($password)) {
-        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+if (isset($_POST['editBtn'])) {
+    $productName = $_POST['product_name'];
+    $price = $_POST['price'];
+
+    // Përditëso emrin e produktit dhe çmimin
+    $success = $orderController->updateOrderProductInfo($orderId, $productName, $price);
+
+    if ($success) {
+        header("Location: dashboard.php");
+        exit();
     } else {
-        $hashedPassword = $user['password']; // Mbetet i njëjti në databazë
+        echo "Gabim gjatë përditësimit të porosisë.";
     }
-
-    $userRepository->updateUser($id, $name, $surname, $email, $hashedPassword, $role);
-
-    header("location:dashboard.php");
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +38,7 @@ if(isset($_POST['editBtn'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit User</title>
+    <title>Edit Product</title>
     <link rel="stylesheet" href="style.css">
     <style>
         * {
@@ -257,7 +260,7 @@ if(isset($_POST['editBtn'])){
             }
 
             .navbar {
-                flex-direction: column;
+                
                 align-items: center;
             }
 
@@ -302,39 +305,26 @@ if(isset($_POST['editBtn'])){
                 border: none;
                 cursor: pointer;
                 pointer-events: auto;" id="butoniLogout">Log Out</button></a>
-                <?php else: ?>
-                    <a href="LogIn1.php" ><button id="butoniLogIn">Log In</button>
-                    </a>
+            
                 <?php endif; ?>
             </div>
     </div>
 </header>
 
 <div class="container">
-    <h2>Edit User</h2>
+    <h2>Edit Order</h2>
     <form action="" method="post">
-        <label for="name">Name:</label>
-        <input class="inputet" type="text" name="name" id="name" value="<?=$user['name']?>" required> <br> <br>
-        
-        <label for="surname">Surname:</label>
-        <input class="inputet" type="text" name="surname" id="surname" value="<?=$user['surname']?>" required> <br> <br>
-        
-        <label for="email">Email:</label>
-        <input class="inputet" type="email" name="email" id="email" value="<?=$user['email']?>" required> <br> <br>
-        
-        <label for="password">Password (leave blank to keep current):</label>
-        <input class="inputet" type="password" name="password" id="password" placeholder="Enter new password"><br> <br>
+    <label for="product_name">Product Name:</label>
+    <input class="inputet" type="text" name="product_name" id="product_name" value="<?= htmlspecialchars($order['product_name']) ?>" required>
+    <br><br>
 
-        <div class="inputet">
-            <select style="border: none; background: none; width: 100%; font-size: 16px; outline: none;"
-    name="role" id="role">
-    <option value="User" <?= $user['role'] == 'User' ? 'selected' : '' ?>>User</option>
-    <option value="Admin" <?= $user['role'] == 'Admin' ? 'selected' : '' ?>>Admin</option>
-</select>
-            </div>
+    <label for="price">Price:</label>
+    <input class="inputet" type="text" name="price" id="price" value="<?= number_format($order['price'], 2) ?>" required>
+    <br><br>
 
-        <button type="submit" name="editBtn" class="butoni">Save Changes</button> <br> <br>
-    </form>
+    <button type="submit" name="editBtn" class="butoni">Save Changes</button>
+</form>
+
 </div>
 
 <footer class="footer">
@@ -349,12 +339,11 @@ if(isset($_POST['editBtn'])){
         <p>&copy; 2024 Furniture Luxenook. All rights reserved.</p>
     </div>
 </footer>
-<script>
+        <script>
             function toggleMenu() {
         const navLinks = document.getElementById('nav-links');
         navLinks.classList.toggle('active');
         }
         </script>
-
 </body>
 </html>

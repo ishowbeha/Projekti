@@ -140,8 +140,8 @@ div #ShikoMEShumeID{
 }
 #kontenti #slideshow {
     width: 100%; /* Make the slideshow take the full width of its container */
-    max-width: 659px; /* Set a maximum width for larger screens */
-    height: 250px; /* Set a fixed height for the slideshow */
+    max-width: 683px; /* Set a maximum width for larger screens */
+    height: 345px; /* Set a fixed height for the slideshow */
     border-radius: 10px;
     object-fit: cover; /* Ensure the image covers the area without distortion */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Add shadow for depth */

@@ -1,8 +1,10 @@
 <?php
+
 include 'session.php';
 checkLogin();
 include 'session_control.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -322,27 +324,38 @@ $orders = $orderController->getAllOrders();
     <h2>Orders</h2>
     <div class="table-container">
         <table>
-            <tr>
-                <th>ID</th>
-                <th>User ID</th>
-                <th>Name</th>
-                <th>Surname</th>
-                <th>Product</th>
-                <th>Price</th>
-            </tr>
-            <?php foreach ($orders as $order): ?>
+            <thead>
                 <tr>
-                    <td><?= htmlspecialchars($order['id']) ?></td>
-                    <td><?= htmlspecialchars($order['user_id']) ?></td>
-                    <td><?= htmlspecialchars($order['name']) ?></td>
-                    <td><?= htmlspecialchars($order['surname']) ?></td>
-                    <td><?= htmlspecialchars($order['product_name']) ?></td>
-                    <td>$<?= htmlspecialchars(number_format($order['price'], 2)) ?></td>
+                    <th>ID</th>
+                    <th>User ID</th>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Edit</th> 
+                    <th>Delete</th>
+
                 </tr>
-            <?php endforeach; ?>
+            </thead>
+            <tbody>
+                <?php foreach ($orders as $order): ?>
+                    <tr>
+                        <td><?= htmlspecialchars($order['id']) ?></td>
+                        <td><?= htmlspecialchars($order['user_id']) ?></td>
+                        <td><?= htmlspecialchars($order['name']) ?></td>
+                        <td><?= htmlspecialchars($order['surname']) ?></td>
+                        <td><?= htmlspecialchars($order['product_name']) ?></td>
+                        <td>$<?= number_format($order['price'], 2) ?></td>
+                        <td><a href="editProduct.php?id=<?= $order['id'] ?>" class="edit-btn">Edit</a></td>
+                        <td><a href="deleteProduct.php?id=<?=$order['id'] ?>" class="delete-btn">Delete</a></td>
+
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
         </table>
     </div>
 </div>
+
 
 <footer class="footer">
     <div class="footer-container">
@@ -355,6 +368,13 @@ $orders = $orderController->getAllOrders();
         navLinks.classList.toggle('active');
     }
 </script>
+<script>
+        // Manipulimi i historisë së shfletuesit që pengon kthimin pas
+        history.pushState(null, null, location.href);
+        window.onpopstate = function () {
+            history.pushState(null, null, location.href);
+        };
+    </script>
 
 </body>
 </html>
